@@ -1,0 +1,12 @@
+{
+    "algorithm": "dijkstra",
+    "metric": "routing_cost",
+    "source": "s1",
+    "destination": "s4",
+    "path": [
+        "s1",
+        "s2",
+        "s4"
+    ],
+    "cost": 10
+}

@@ -1,0 +1,26 @@
+
+
+SWITCH s1
+
+ovs-ofctl: s1 is not a bridge or a socket
+
+
+
+SWITCH s2
+
+ cookie=0x0, duration=305.105s, table=0, n_packets=0, n_bytes=0, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535
+ cookie=0x0, duration=305.133s, table=0, n_packets=11, n_bytes=770, priority=0 actions=CONTROLLER:65535
+
+
+
+SWITCH s3
+
+ cookie=0x0, duration=305.139s, table=0, n_packets=0, n_bytes=0, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535
+ cookie=0x0, duration=305.140s, table=0, n_packets=11, n_bytes=770, priority=0 actions=CONTROLLER:65535
+
+
+
+SWITCH s4
+
+ovs-ofctl: s4 is not a bridge or a socket
+

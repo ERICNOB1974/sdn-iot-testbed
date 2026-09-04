@@ -1,0 +1,6 @@
+loading app controller.routing_controller
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app controller.routing_controller of RoutingController
+instantiating app ryu.topology.switches of Switches
+instantiating app ryu.controller.ofp_handler of OFPHandler

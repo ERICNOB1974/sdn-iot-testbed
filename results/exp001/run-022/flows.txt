@@ -1,0 +1,34 @@
+
+
+SWITCH s1
+
+ cookie=0x0, duration=4.220s, table=0, n_packets=10, n_bytes=600, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535
+ cookie=0x0, duration=3.821s, table=0, n_packets=73, n_bytes=4074, priority=10,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:01 actions=output:"s1-eth1"
+ cookie=0x0, duration=3.806s, table=0, n_packets=17, n_bytes=1666, priority=10,dl_src=00:00:00:00:00:01,dl_dst=00:00:00:00:00:02 actions=output:"s1-eth2"
+ cookie=0x0, duration=4.227s, table=0, n_packets=1197, n_bytes=100906, priority=0 actions=CONTROLLER:65535
+
+
+
+SWITCH s2
+
+ cookie=0x0, duration=4.208s, table=0, n_packets=9, n_bytes=540, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535
+ cookie=0x0, duration=3.867s, table=0, n_packets=73, n_bytes=4074, priority=10,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:01 actions=output:"s2-eth1"
+ cookie=0x0, duration=3.852s, table=0, n_packets=18, n_bytes=1764, priority=10,dl_src=00:00:00:00:00:01,dl_dst=00:00:00:00:00:02 actions=output:"s2-eth2"
+ cookie=0x0, duration=4.218s, table=0, n_packets=1200, n_bytes=101104, priority=0 actions=CONTROLLER:65535
+
+
+
+SWITCH s3
+
+ cookie=0x0, duration=4.195s, table=0, n_packets=8, n_bytes=480, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535
+ cookie=0x0, duration=4.203s, table=0, n_packets=1193, n_bytes=100542, priority=0 actions=CONTROLLER:65535
+
+
+
+SWITCH s4
+
+ cookie=0x0, duration=4.153s, table=0, n_packets=8, n_bytes=480, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535
+ cookie=0x0, duration=3.947s, table=0, n_packets=72, n_bytes=4032, priority=10,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:01 actions=output:"s4-eth1"
+ cookie=0x0, duration=3.932s, table=0, n_packets=18, n_bytes=1764, priority=10,dl_src=00:00:00:00:00:01,dl_dst=00:00:00:00:00:02 actions=output:"s4-eth3"
+ cookie=0x0, duration=4.160s, table=0, n_packets=1191, n_bytes=100306, priority=0 actions=CONTROLLER:65535
+

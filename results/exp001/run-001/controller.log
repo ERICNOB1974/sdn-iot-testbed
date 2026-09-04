@@ -1,0 +1,6 @@
+loading app controller/dijkstra.py
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app controller/dijkstra.py of DijkstraController
+instantiating app ryu.topology.switches of Switches
+instantiating app ryu.controller.ofp_handler of OFPHandler

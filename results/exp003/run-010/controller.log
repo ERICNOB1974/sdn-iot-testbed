@@ -1,0 +1,55 @@
+loading app controller.routing_controller
+loading app ryu.controller.ofp_handler
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app controller.routing_controller of RoutingController
+Configuracion del experimento: /workspace/results/exp003/run-010/resolved_config.yaml
+Algoritmo de ruteo: dijkstra
+Metrica de ruteo: routing_cost
+Politica de decision: sticky
+instantiating app ryu.controller.ofp_handler of OFPHandler
+instantiating app ryu.topology.switches of Switches
+Grafo actual: []
+Grafo actual: []
+Grafo actual: [(2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (3, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (1, 3, {'weight': 10, 'port': 4, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (3, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'routing_cost': 10}})]
+HOST: 00:00:00:00:00:02 conectado a s1 puerto 2
+HOST: 00:00:00:00:00:01 conectado a s1 puerto 1
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (1, 3, {'weight': 10, 'port': 4, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (3, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (1, 3, {'weight': 10, 'port': 4, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (3, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (4, 3, {'weight': 10, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (4, 2, {'weight': 10, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (1, 3, {'weight': 10, 'port': 4, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (3, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (4, 3, {'weight': 10, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (4, 2, {'weight': 10, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (1, 3, {'weight': 10, 'port': 4, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (2, 4, {'weight': 10, 'port': 2, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (3, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (3, 4, {'weight': 10, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (4, 3, {'weight': 10, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (4, 2, {'weight': 10, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (1, 3, {'weight': 10, 'port': 4, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (2, 4, {'weight': 10, 'port': 2, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (3, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (3, 4, {'weight': 10, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (4, 3, {'weight': 10, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 10}}), (4, 2, {'weight': 10, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 10}})]
+HOST: 00:00:00:00:00:03 conectado a s4 puerto 3
+FLOW SPEC: 10.0.0.1 -> 10.0.0.3 corresponde a flow-1
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:01 -> 00:00:00:00:00:03 | ip=10.0.0.1 -> 10.0.0.3 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=20
+FLOW SPEC: 10.0.0.3 -> 10.0.0.1 sin especificacion
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:03 -> 00:00:00:00:00:01 | ip=10.0.0.3 -> 10.0.0.1 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=20
+HOST: 00:00:00:00:00:04 conectado a s4 puerto 4
+FLOW SPEC: 10.0.0.2 -> 10.0.0.4 corresponde a flow-2
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:02 -> 00:00:00:00:00:04 | ip=10.0.0.2 -> 10.0.0.4 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=20
+FLOW SPEC: 10.0.0.2 -> 10.0.0.4 corresponde a flow-2
+FLOW SPEC: 10.0.0.4 -> 10.0.0.2 sin especificacion
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:04 -> 00:00:00:00:00:02 | ip=10.0.0.4 -> 10.0.0.2 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=20
+FLOW SPEC: 10.0.0.4 -> 10.0.0.2 sin especificacion
+FLOW SPEC: 10.0.0.1 -> 10.0.0.4 corresponde a flow-3
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:01 -> 00:00:00:00:00:04 | ip=10.0.0.1 -> 10.0.0.4 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=20
+FLOW SPEC: 10.0.0.1 -> 10.0.0.4 corresponde a flow-3
+FLOW SPEC: 10.0.0.1 -> 10.0.0.4 corresponde a flow-3
+FLOW SPEC: 10.0.0.4 -> 10.0.0.1 sin especificacion
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:04 -> 00:00:00:00:00:01 | ip=10.0.0.4 -> 10.0.0.1 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=20
+FLOW SPEC: 10.0.0.4 -> 10.0.0.1 sin especificacion
+FLOW SPEC: 10.0.0.4 -> 10.0.0.1 sin especificacion
+FLOW SPEC: 10.0.0.2 -> 10.0.0.3 corresponde a flow-4
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:02 -> 00:00:00:00:00:03 | ip=10.0.0.2 -> 10.0.0.3 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=20
+FLOW SPEC: 10.0.0.2 -> 10.0.0.3 corresponde a flow-4
+FLOW SPEC: 10.0.0.2 -> 10.0.0.3 corresponde a flow-4
+FLOW SPEC: 10.0.0.2 -> 10.0.0.3 corresponde a flow-4
+FLOW SPEC: 10.0.0.3 -> 10.0.0.2 sin especificacion
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:03 -> 00:00:00:00:00:02 | ip=10.0.0.3 -> 10.0.0.2 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=20
+FLOW SPEC: 10.0.0.3 -> 10.0.0.2 sin especificacion
+FLOW SPEC: 10.0.0.3 -> 10.0.0.2 sin especificacion
+FLOW SPEC: 10.0.0.3 -> 10.0.0.2 sin especificacion

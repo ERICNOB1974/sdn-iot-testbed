@@ -1,0 +1,11 @@
+{
+  "experiment_id": "exp001",
+  "run_id": "run-021",
+  "status": "success",
+  "start_time": "2026-08-31T14:53:26-03:00",
+  "end_time": "2026-08-31T14:53:36-03:00",
+  "git_commit": "300bfb335df1d3a19c91921c5c488ba623e7b234",
+  "controller_environment": "ryu-4.34-py38",
+  "controller_app": "controller.routing_controller",
+  "openflow_port": 6633
+}

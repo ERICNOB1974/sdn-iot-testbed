@@ -1,0 +1,37 @@
+experiment:
+  id: exp004
+  name: dijkstra-diamond-200-hosts
+
+environment:
+  controller: ryu-4.34-py38
+  mininet: mininet-2.3.0
+  openflow: "1.3"
+
+controller:
+  app: controller.routing_controller
+  ip: 127.0.0.1
+  port: 6633
+
+routing:
+  name: dijkstra
+  module: controller.routing.dijkstra
+  class: DijkstraRouting
+  metric: routing_cost
+
+topology:
+  definition: topologies/definitions/diamond_200_hosts.yaml
+
+network:
+  profile: network/profiles/diamond_low_delay.yaml
+
+traffic:
+  profile: traffic/profiles/ping_200_hosts.yaml
+
+  generator:
+    module: traffic.generators.ping
+    function: run_ping
+
+collectors:
+  - name: flows
+    module: collectors.flows
+    function: collect_flows

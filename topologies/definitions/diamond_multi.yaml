@@ -1,0 +1,58 @@
+name: diamond-multi
+
+hosts:
+  - name: h1
+
+  - name: h2
+
+  - name: h3
+
+  - name: h4
+
+
+switches:
+  - name: s1
+    dpid: "0000000000000001"
+
+  - name: s2
+    dpid: "0000000000000002"
+
+  - name: s3
+    dpid: "0000000000000003"
+
+  - name: s4
+    dpid: "0000000000000004"
+
+
+links:
+  - id: h1-s1
+    source: h1
+    destination: s1
+
+  - id: h2-s1
+    source: h2
+    destination: s1
+
+  - id: s1-s2
+    source: s1
+    destination: s2
+
+  - id: s2-s4
+    source: s2
+    destination: s4
+
+  - id: s1-s3
+    source: s1
+    destination: s3
+
+  - id: s3-s4
+    source: s3
+    destination: s4
+
+  - id: s4-h3
+    source: s4
+    destination: h3
+
+  - id: s4-h4
+    source: s4
+    destination: h4

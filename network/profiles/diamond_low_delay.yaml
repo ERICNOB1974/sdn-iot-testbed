@@ -1,0 +1,19 @@
+name: diamond-low-delay
+
+links:
+
+  s1-s2:
+    delay_ms: 5
+    routing_cost: 5
+
+  s2-s4:
+    delay_ms: 5
+    routing_cost: 5
+
+  s1-s3:
+    delay_ms: 20
+    routing_cost: 20
+
+  s3-s4:
+    delay_ms: 20
+    routing_cost: 20

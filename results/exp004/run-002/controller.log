@@ -1,0 +1,18 @@
+loading app controller.routing_controller
+loading app ryu.controller.ofp_handler
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app controller.routing_controller of RoutingController
+Configuracion del experimento: /workspace/results/exp004/run-002/resolved_config.yaml
+Algoritmo de ruteo: dijkstra
+Metrica de ruteo: routing_cost
+Politica de decision: sticky
+Modo de planificacion: per_flow
+instantiating app ryu.controller.ofp_handler of OFPHandler
+instantiating app ryu.topology.switches of Switches
+Grafo actual: []
+Grafo actual: []
+HOST: 22:f0:75:57:cf:03 conectado a s2 puerto 2
+HOST: f6:d6:55:c8:4e:03 conectado a s3 puerto 1
+HOST: 76:fc:fe:e7:1b:12 conectado a s2 puerto 1
+HOST: ee:9e:d5:c0:dc:0b conectado a s3 puerto 2

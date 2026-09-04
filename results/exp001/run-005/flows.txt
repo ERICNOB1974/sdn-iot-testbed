@@ -1,0 +1,34 @@
+
+========================================
+SWITCH s1
+========================================
+ cookie=0x0, duration=3.911s, table=0, n_packets=4, n_bytes=240, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535
+ cookie=0x0, duration=3.818s, table=0, n_packets=87, n_bytes=4662, priority=10,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:01 actions=output:"s1-eth1"
+ cookie=0x0, duration=3.804s, table=0, n_packets=17, n_bytes=1666, priority=10,dl_src=00:00:00:00:00:01,dl_dst=00:00:00:00:00:02 actions=output:"s1-eth2"
+ cookie=0x0, duration=3.914s, table=0, n_packets=1520, n_bytes=129552, priority=0 actions=CONTROLLER:65535
+
+
+========================================
+SWITCH s2
+========================================
+ cookie=0x0, duration=3.960s, table=0, n_packets=4, n_bytes=240, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535
+ cookie=0x0, duration=3.868s, table=0, n_packets=88, n_bytes=4704, priority=10,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:01 actions=output:"s2-eth1"
+ cookie=0x0, duration=3.854s, table=0, n_packets=18, n_bytes=1764, priority=10,dl_src=00:00:00:00:00:01,dl_dst=00:00:00:00:00:02 actions=output:"s2-eth2"
+ cookie=0x0, duration=3.963s, table=0, n_packets=1508, n_bytes=128486, priority=0 actions=CONTROLLER:65535
+
+
+========================================
+SWITCH s3
+========================================
+ cookie=0x0, duration=3.982s, table=0, n_packets=4, n_bytes=240, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535
+ cookie=0x0, duration=3.985s, table=0, n_packets=1517, n_bytes=129252, priority=0 actions=CONTROLLER:65535
+
+
+========================================
+SWITCH s4
+========================================
+ cookie=0x0, duration=4.008s, table=0, n_packets=6, n_bytes=360, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535
+ cookie=0x0, duration=3.913s, table=0, n_packets=87, n_bytes=4662, priority=10,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:01 actions=output:"s4-eth1"
+ cookie=0x0, duration=3.898s, table=0, n_packets=18, n_bytes=1764, priority=10,dl_src=00:00:00:00:00:01,dl_dst=00:00:00:00:00:02 actions=output:"s4-eth3"
+ cookie=0x0, duration=4.011s, table=0, n_packets=1494, n_bytes=127256, priority=0 actions=CONTROLLER:65535
+

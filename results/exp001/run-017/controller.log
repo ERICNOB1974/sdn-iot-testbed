@@ -1,0 +1,13 @@
+argument --ofp_tcp_listen_port: Invalid Integer value: 
+ SDN-IoT Mininet environment
+
+Mininet:
+
+Open vSwitch:
+ovs-vsctl (Open vSwitch) 2.17.12
+
+Python:
+Python 3.10.12
+
+
+6633

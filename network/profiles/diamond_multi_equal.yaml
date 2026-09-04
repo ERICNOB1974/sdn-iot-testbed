@@ -1,0 +1,19 @@
+name: diamond-multi-equal
+
+links:
+
+  s1-s2:
+    delay_ms: 5
+    routing_cost: 10
+
+  s2-s4:
+    delay_ms: 5
+    routing_cost: 10
+
+  s1-s3:
+    delay_ms: 5
+    routing_cost: 10
+
+  s3-s4:
+    delay_ms: 5
+    routing_cost: 10

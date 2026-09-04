@@ -1,0 +1,114 @@
+experiment:
+  id: exp003
+  name: dijkstra-diamond-multi
+environment:
+  controller: ryu-4.34-py38
+  mininet: mininet-2.3.0
+  openflow: '1.3'
+controller:
+  app: controller.routing_controller
+  ip: 127.0.0.1
+  port: 6633
+routing:
+  name: dijkstra
+  module: controller.routing.dijkstra
+  class: DijkstraRouting
+  metric: routing_cost
+topology:
+  definition: topologies/definitions/diamond_multi.yaml
+  name: diamond-multi
+  hosts:
+  - name: h1
+    ip: 10.0.0.1
+    mac: 00:00:00:00:00:01
+  - name: h2
+    ip: 10.0.0.2
+    mac: 00:00:00:00:00:02
+  - name: h3
+    ip: 10.0.0.3
+    mac: 00:00:00:00:00:03
+  - name: h4
+    ip: 10.0.0.4
+    mac: 00:00:00:00:00:04
+  switches:
+  - name: s1
+    dpid: '0000000000000001'
+  - name: s2
+    dpid: '0000000000000002'
+  - name: s3
+    dpid: '0000000000000003'
+  - name: s4
+    dpid: '0000000000000004'
+  links:
+  - id: h1-s1
+    source: h1
+    destination: s1
+  - id: h2-s1
+    source: h2
+    destination: s1
+  - id: s1-s2
+    source: s1
+    destination: s2
+  - id: s2-s4
+    source: s2
+    destination: s4
+  - id: s1-s3
+    source: s1
+    destination: s3
+  - id: s3-s4
+    source: s3
+    destination: s4
+  - id: s4-h3
+    source: s4
+    destination: h3
+  - id: s4-h4
+    source: s4
+    destination: h4
+network:
+  profile: network/profiles/diamond_multi_equal.yaml
+  name: diamond-multi-equal
+  links:
+    s1-s2:
+      delay_ms: 5
+      routing_cost: 10
+    s2-s4:
+      delay_ms: 5
+      routing_cost: 10
+    s1-s3:
+      delay_ms: 5
+      routing_cost: 10
+    s3-s4:
+      delay_ms: 5
+      routing_cost: 10
+traffic:
+  profile: traffic/profiles/ping_multi.yaml
+  generator:
+    module: traffic.generators.ping
+    function: run_ping
+  config:
+    type: ping
+    flows:
+    - id: flow-1
+      source: h1
+      destination: h3
+      count: 10
+      interval: 0.2
+    - id: flow-2
+      source: h2
+      destination: h4
+      count: 10
+      interval: 0.2
+    - id: flow-3
+      source: h1
+      destination: h4
+      count: 10
+      interval: 0.2
+    - id: flow-4
+      source: h2
+      destination: h3
+      count: 10
+      interval: 0.2
+collectors:
+- name: flows
+  module: collectors.flows
+  function: collect_flows
