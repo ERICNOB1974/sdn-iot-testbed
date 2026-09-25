@@ -316,6 +316,7 @@ class NetworkMonitor:
                 "tx_pps": tx_pps,
                 "rx_pps": rx_pps,
                 "sample_interval_seconds": elapsed,
+                "sample_time_monotonic": timestamp,
             }
 
             #

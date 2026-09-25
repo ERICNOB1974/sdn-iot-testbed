@@ -206,31 +206,18 @@ class NetworkState:
 
     def get_path_bottleneck_metric(self, path, metric):
 
-        #
-        # Devuelve el menor valor de una metrica
-        # encontrado en el camino.
-        #
-        # Es particularmente util para ancho de
-        # banda residual.
-        #
-        # Ejemplo:
-        #
-        # s1 --80 Mbps--> s2 --30 Mbps--> s4
-        #
-        # bottleneck = 30 Mbps
-        #
-
         values = []
 
         for index in range(len(path) - 1):
             source = path[index]
-
             destination = path[index + 1]
 
             value = self.get_metric(source, destination, metric)
 
-            if value is not None:
-                values.append(value)
+            if value is None:
+                return None
+
+            values.append(value)
 
         if not values:
             return None
@@ -239,25 +226,18 @@ class NetworkState:
 
     def get_path_max_metric(self, path, metric):
 
-        #
-        # Devuelve el mayor valor encontrado
-        # entre los enlaces del camino.
-        #
-        # Puede servir, por ejemplo, para conocer
-        # la maxima utilizacion de una ruta.
-        #
-
         values = []
 
         for index in range(len(path) - 1):
             source = path[index]
-
             destination = path[index + 1]
 
             value = self.get_metric(source, destination, metric)
 
-            if value is not None:
-                values.append(value)
+            if value is None:
+                return None
+
+            values.append(value)
 
         if not values:
             return None
