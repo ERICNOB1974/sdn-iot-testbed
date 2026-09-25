@@ -1,0 +1,121 @@
+name: iinet
+hosts: []
+switches:
+- name: s1
+  dpid: '0000000000000001'
+  metadata:
+    topology_zoo_id: '21'
+    label: Hobart
+    country: Australia
+    latitude: -42.87936
+    longitude: 147.32941
+    internal: 1
+- name: s2
+  dpid: '0000000000000002'
+  metadata:
+    topology_zoo_id: '23'
+    label: Darwin
+    country: Australia
+    latitude: -12.46113
+    longitude: 130.84185
+    internal: 1
+- name: s3
+  dpid: '0000000000000003'
+  metadata:
+    topology_zoo_id: '24'
+    label: Adelaide
+    country: Australia
+    latitude: -34.93333
+    longitude: 138.6
+    internal: 1
+- name: s4
+  dpid: '0000000000000004'
+  metadata:
+    topology_zoo_id: '25'
+    label: Perth
+    country: Australia
+    latitude: -31.93333
+    longitude: 115.83333
+    internal: 1
+- name: s5
+  dpid: '0000000000000005'
+  metadata:
+    topology_zoo_id: '26'
+    label: Brisbane
+    country: Australia
+    latitude: -27.46794
+    longitude: 153.02809
+    internal: 1
+- name: s6
+  dpid: '0000000000000006'
+  metadata:
+    topology_zoo_id: '27'
+    label: Sydney1
+    country: Australia
+    latitude: -33.86785
+    longitude: 151.20732
+    internal: 1
+- name: s7
+  dpid: '0000000000000007'
+  metadata:
+    topology_zoo_id: '28'
+    label: Sydney2
+    country: Australia
+    latitude: -33.86785
+    longitude: 151.20732
+    internal: 1
+- name: s8
+  dpid: 0000000000000008
+  metadata:
+    topology_zoo_id: '29'
+    label: Canberra
+    country: Australia
+    latitude: -35.28346
+    longitude: 149.12807
+    internal: 1
+- name: s9
+  dpid: 0000000000000009
+  metadata:
+    topology_zoo_id: '30'
+    label: Melbourne
+    country: Australia
+    latitude: -37.814
+    longitude: 144.96332
+    internal: 1
+links:
+- id: s1-s7
+  source: s1
+  destination: s7
+- id: s2-s3
+  source: s2
+  destination: s3
+- id: s3-s4
+  source: s3
+  destination: s4
+- id: s3-s6
+  source: s3
+  destination: s6
+- id: s3-s8
+  source: s3
+  destination: s8
+- id: s4-s6
+  source: s4
+  destination: s6
+- id: s4-s7
+  source: s4
+  destination: s7
+- id: s5-s6
+  source: s5
+  destination: s6
+- id: s5-s7
+  source: s5
+  destination: s7
+- id: s6-s9
+  source: s6
+  destination: s9
+- id: s7-s8
+  source: s7
+  destination: s8
+- id: s7-s9
+  source: s7
+  destination: s9

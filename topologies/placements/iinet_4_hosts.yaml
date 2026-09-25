@@ -1,0 +1,14 @@
+name: iinet-4-hosts
+
+hosts:
+  - name: h1
+    switch: s2
+
+  - name: h2
+    switch: s4
+
+  - name: h3
+    switch: s5
+
+  - name: h4
+    switch: s9

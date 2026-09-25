@@ -1,0 +1,11 @@
+traffic:
+  type: ping
+
+  flows:
+    - id: flow-1
+      source: h1
+      destination: h4
+
+    - id: flow-2
+      source: h2
+      destination: h3

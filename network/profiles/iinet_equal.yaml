@@ -1,0 +1,50 @@
+name: iinet-equal
+links:
+  s1-s7:
+    delay_ms: 5.0
+    bandwidth_mbps: 100.0
+    routing_cost: 10.0
+  s2-s3:
+    delay_ms: 5.0
+    bandwidth_mbps: 100.0
+    routing_cost: 10.0
+  s3-s4:
+    delay_ms: 5.0
+    bandwidth_mbps: 100.0
+    routing_cost: 10.0
+  s3-s6:
+    delay_ms: 5.0
+    bandwidth_mbps: 100.0
+    routing_cost: 10.0
+  s3-s8:
+    delay_ms: 5.0
+    bandwidth_mbps: 100.0
+    routing_cost: 10.0
+  s4-s6:
+    delay_ms: 5.0
+    bandwidth_mbps: 100.0
+    routing_cost: 10.0
+  s4-s7:
+    delay_ms: 5.0
+    bandwidth_mbps: 100.0
+    routing_cost: 10.0
+  s5-s6:
+    delay_ms: 5.0
+    bandwidth_mbps: 100.0
+    routing_cost: 10.0
+  s5-s7:
+    delay_ms: 5.0
+    bandwidth_mbps: 100.0
+    routing_cost: 10.0
+  s6-s9:
+    delay_ms: 5.0
+    bandwidth_mbps: 100.0
+    routing_cost: 10.0
+  s7-s8:
+    delay_ms: 5.0
+    bandwidth_mbps: 100.0
+    routing_cost: 10.0
+  s7-s9:
+    delay_ms: 5.0
+    bandwidth_mbps: 100.0
+    routing_cost: 10.0
