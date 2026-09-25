@@ -58,5 +58,9 @@ def run_ping(net, config):
         )
 
     return TrafficResult(
-        raw_output="\n".join(outputs), metadata={"type": "ping", "flows": flow_metadata}
+        raw_output="\n".join(outputs),
+        metadata={
+            "type": "ping",
+            "flows": flow_metadata,
+        },
     )
