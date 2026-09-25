@@ -11,6 +11,8 @@ class NetworkModel:
 
         self.link_id_by_nodes = {}
 
+        self.switch_link_endpoints = []
+
         self.network_links = config["network"].get("links", {})
 
         self._build_switch_maps()
@@ -53,6 +55,12 @@ class NetworkModel:
 
             self.link_id_by_nodes[(destination, source)] = link_id
 
+            source_dpid = self.dpid_by_switch_name[source]
+
+            destination_dpid = self.dpid_by_switch_name[destination]
+
+            self.switch_link_endpoints.append((source_dpid, destination_dpid, link_id))
+
     def get_switch_name(self, dpid):
 
         return self.switch_name_by_dpid.get(dpid)
@@ -60,6 +68,10 @@ class NetworkModel:
     def get_switch_dpid(self, name):
 
         return self.dpid_by_switch_name.get(name)
+
+    def get_switch_dpids(self):
+
+        return set(self.switch_name_by_dpid.keys())
 
     def get_link_id(self, source_dpid, destination_dpid):
 
@@ -97,3 +109,7 @@ class NetworkModel:
     def get_switch_link_ids(self):
 
         return set(self.link_id_by_nodes.values())
+
+    def get_switch_link_endpoints(self):
+
+        return list(self.switch_link_endpoints)

@@ -124,20 +124,35 @@ class TopologyManager:
     def is_complete(self):
 
         #
-        # Verifica que Ryu haya descubierto todos
-        # los enlaces switch-switch declarados
-        # originalmente en la configuracion.
-        #
-        # Esto evita comenzar a aprender hosts
-        # mientras la topologia todavia esta
-        # incompleta.
+        # Verificar primero que todos los switches esperados
+        # hayan sido descubiertos.
         #
 
-        expected = self.network_model.get_switch_link_ids()
+        expected_switches = self.network_model.get_switch_dpids()
 
-        discovered = self.get_discovered_link_ids()
+        discovered_switches = set(self.graph.nodes())
 
-        return expected == discovered
+        if not expected_switches.issubset(discovered_switches):
+            return False
+
+        #
+        # Cada enlace fisico switch-switch debe estar descubierto
+        # en AMBAS direcciones.
+        #
+        # No alcanza con ver el link_id una sola vez, porque Ryu
+        # descubre enlaces dirigidos. Si solo existe sA -> sB pero
+        # falta sB -> sA, el puerto local de sB todavia no puede
+        # clasificarse correctamente como puerto switch-switch.
+        #
+
+        for source, destination, _ in self.network_model.get_switch_link_endpoints():
+            if not self.graph.has_edge(source, destination):
+                return False
+
+            if not self.graph.has_edge(destination, source):
+                return False
+
+        return True
 
     def build_flooding_tree(self):
 

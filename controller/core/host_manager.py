@@ -5,10 +5,12 @@ class HostManager:
 
     def learn(self, mac, switch, port):
 
-        if mac in self.hosts:
+        location = {"switch": switch, "port": port}
+
+        if self.hosts.get(mac) == location:
             return False
 
-        self.hosts[mac] = {"switch": switch, "port": port}
+        self.hosts[mac] = location
 
         return True
 
