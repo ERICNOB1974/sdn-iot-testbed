@@ -29,6 +29,7 @@ from common.config_loader import load_experiment_config
 from common.config_loader import load_traffic_profile
 from common.config_loader import load_yaml
 from common.host_identity import assign_host_identities
+from common.topology_placement import TopologyPlacementError, apply_placement
 
 
 class ConfigurationError(Exception):
@@ -937,6 +938,21 @@ def resolve_experiment_config(
 
     validate_topology_definition(topology_definition)
 
+    placement_path = experiment_config["topology"].get("placement")
+
+    if placement_path is not None:
+        placement = load_yaml(placement_path)
+
+        try:
+            topology_definition = apply_placement(
+                topology_definition,
+                placement,
+            )
+        except TopologyPlacementError as exc:
+            raise ConfigurationError(str(exc)) from exc
+
+        validate_topology_definition(topology_definition)
+
     network_profile_path = experiment_config["network"]["profile"]
 
     network_profile = load_yaml(network_profile_path)
@@ -972,6 +988,9 @@ def resolve_experiment_config(
         "switches": topology_definition["switches"],
         "links": topology_definition["links"],
     }
+
+    if placement_path is not None:
+        resolved["topology"]["placement"] = placement_path
 
     resolved["network"] = {
         "profile": network_profile_path,
