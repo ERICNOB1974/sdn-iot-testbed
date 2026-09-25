@@ -15,25 +15,64 @@ from ryu.topology import event
 
 from common.component_loader import create_instance
 from common.config_loader import load_yaml
+
 from controller.core.flow_identity import FlowIdentity
 from controller.core.flow_manager import FlowManager
 from controller.core.flow_registry import FlowRegistry
+from controller.core.flooding_manager import FloodingManager
 from controller.core.host_manager import HostManager
 from controller.core.network_model import NetworkModel
+from controller.core.network_monitor import NetworkMonitor
 from controller.core.network_state import NetworkState
+from controller.core.network_state_recorder import NetworkStateRecorder
 from controller.core.result_manager import ResultManager
 from controller.core.routing_state import RoutingState
 from controller.core.rule_capacity_manager import RuleCapacityManager
 from controller.core.topology_manager import TopologyManager
+
 from controller.routing.context import RoutingContext
 
 
 class RoutingController(app_manager.RyuApp):
+    """
+    Controlador SDN principal del banco de pruebas.
+
+    Sus responsabilidades principales son:
+
+    - cargar la configuracion resuelta del experimento;
+    - cargar dinamicamente el algoritmo de routing;
+    - mantener la topologia descubierta por Ryu;
+    - aprender la ubicacion de los hosts;
+    - identificar y registrar los flujos;
+    - construir el contexto que reciben los algoritmos;
+    - solicitar decisiones de routing;
+    - almacenar decisiones sticky;
+    - instalar reglas OpenFlow;
+    - realizar flooding auxiliar cuando el destino aun no es conocido;
+    - monitorear el estado dinamico de los enlaces;
+    - almacenar resultados y mediciones para analisis posterior.
+
+    La logica especifica de cada algoritmo de routing NO debe
+    implementarse en esta clase.
+
+    Algoritmos como Dijkstra, SWAY, AQRA o MINA deben implementar
+    su propia logica dentro de controller/routing/.
+    """
+
     OFP_VERSIONS = [ofproto_v1_3.OFP_VERSION]
+
+    #
+    # Politicas de decision actualmente soportadas
+    # por el controlador.
+    #
 
     SUPPORTED_DECISION_POLICIES = {
         "sticky",
     }
+
+    #
+    # Modos de planificacion actualmente soportados.
+    #
 
     SUPPORTED_SCHEDULING_MODES = {
         "per_flow",
@@ -44,7 +83,9 @@ class RoutingController(app_manager.RyuApp):
         super(RoutingController, self).__init__(*args, **kwargs)
 
         #
+        # ============================================================
         # Configuracion resuelta.
+        # ============================================================
         #
 
         config_path = os.environ["RESOLVED_CONFIG"]
@@ -52,7 +93,9 @@ class RoutingController(app_manager.RyuApp):
         self.config = load_yaml(config_path)
 
         #
-        # Routing.
+        # ============================================================
+        # Algoritmo de routing.
+        # ============================================================
         #
 
         routing_config = self.config["routing"]
@@ -60,6 +103,18 @@ class RoutingController(app_manager.RyuApp):
         self.routing_name = routing_config["name"]
 
         self.routing_metric = routing_config["metric"]
+
+        #
+        # Crear dinamicamente la instancia del algoritmo.
+        #
+        # Ejemplo:
+        #
+        # module:
+        #     controller.routing.dijkstra
+        #
+        # class:
+        #     DijkstraRouting
+        #
 
         self.routing = create_instance(
             routing_config["module"], routing_config["class"]
@@ -76,62 +131,38 @@ class RoutingController(app_manager.RyuApp):
         self._validate_routing_contract()
 
         #
+        # ============================================================
         # Modelo de red.
+        # ============================================================
         #
 
         self.network_model = NetworkModel(self.config)
 
         #
+        # ============================================================
         # Topologia descubierta por Ryu.
+        # ============================================================
         #
 
         self.topology = TopologyManager(self.network_model)
 
         #
-        # Estado generico de la red.
+        # ============================================================
+        # Estado de red.
+        # ============================================================
+        #
+        # NetworkState contiene:
+        #
+        # - metricas estaticas;
+        # - metricas dinamicas.
         #
 
         self.network_state = NetworkState(self.topology)
 
         #
-        # Registro de flujos.
-        #
-
-        self.flow_registry = FlowRegistry(self.config)
-
-        #
-        # Capacidad de reglas de los switches.
-        #
-        # Actualmente solamente existe la
-        # abstraccion. Algoritmos futuros como
-        # SWAY podran utilizarla.
-        #
-
-        self.rule_capacity = RuleCapacityManager()
-
-        #
-        # Hosts aprendidos dinamicamente.
-        #
-
-        self.hosts = HostManager()
-
-        #
-        # Administracion de reglas OpenFlow.
-        #
-
-        self.flows = FlowManager()
-
-        #
-        # Estado de decisiones de routing.
-        #
-        # Actualmente utilizado por algoritmos
-        # con decision_policy = "sticky".
-        #
-
-        self.routing_state = RoutingState()
-
-        #
+        # ============================================================
         # Resultados.
+        # ============================================================
         #
 
         results_dir = os.environ.get("RESULTS_DIR", "/workspace/results")
@@ -139,7 +170,106 @@ class RoutingController(app_manager.RyuApp):
         self.results = ResultManager(results_dir)
 
         #
+        # ============================================================
+        # Recorder del estado dinamico.
+        # ============================================================
+        #
+        # Guarda las muestras del NetworkMonitor en:
+        #
+        #     network_state.jsonl
+        #
+
+        self.network_state_recorder = NetworkStateRecorder(results_dir)
+
+        #
+        # ============================================================
+        # Monitor dinamico de red.
+        # ============================================================
+        #
+        # Solicita estadisticas OpenFlow de los puertos
+        # y calcula:
+        #
+        # - tx_bps;
+        # - rx_bps;
+        # - tx_pps;
+        # - rx_pps;
+        # - utilization;
+        # - residual_bandwidth_mbps.
+        #
+
+        self.network_monitor = NetworkMonitor(
+            app=self,
+            topology=self.topology,
+            network_state=self.network_state,
+            recorder=self.network_state_recorder,
+            interval=2.0,
+        )
+
+        #
+        # ============================================================
+        # Registro de flujos.
+        # ============================================================
+        #
+        # FlowRegistry necesita la configuracion completa
+        # para poder resolver las especificaciones declaradas
+        # en traffic.config.flows.
+        #
+
+        self.flow_registry = FlowRegistry(self.config)
+
+        #
+        # ============================================================
+        # Capacidad de reglas.
+        # ============================================================
+        #
+        # Esta abstraccion sera especialmente util para
+        # algoritmos como SWAY.
+        #
+
+        self.rule_capacity = RuleCapacityManager()
+
+        #
+        # ============================================================
+        # Hosts.
+        # ============================================================
+        #
+
+        self.hosts = HostManager()
+
+        #
+        # ============================================================
+        # Administracion de reglas OpenFlow.
+        # ============================================================
+        #
+
+        self.flows = FlowManager()
+
+        #
+        # ============================================================
+        # Flooding.
+        # ============================================================
+        #
+        # Se utiliza cuando todavia no conocemos
+        # la ubicacion del host destino.
+        #
+
+        self.flooding = FloodingManager(self.topology)
+
+        #
+        # ============================================================
+        # Estado de decisiones de routing.
+        # ============================================================
+        #
+        # RoutingState conserva las decisiones cuando
+        # decision_policy == "sticky".
+        #
+
+        self.routing_state = RoutingState()
+
+        #
+        # ============================================================
         # Logs iniciales.
+        # ============================================================
         #
 
         self.logger.info("Configuracion del experimento: %s", config_path)
@@ -152,7 +282,22 @@ class RoutingController(app_manager.RyuApp):
 
         self.logger.info("Modo de planificacion: %s", self.scheduling_mode)
 
+        #
+        # ============================================================
+        # Iniciar monitor.
+        # ============================================================
+        #
+        # Lo hacemos al final del constructor para que
+        # todos los componentes del controlador ya existan.
+        #
+
+        self.network_monitor.start()
+
     def _validate_routing_contract(self):
+        """
+        Verifica que el algoritmo cargado utilice un contrato
+        actualmente soportado por RoutingController.
+        """
 
         if self.decision_policy not in self.SUPPORTED_DECISION_POLICIES:
             raise ValueError(
@@ -170,16 +315,36 @@ class RoutingController(app_manager.RyuApp):
 
     @set_ev_cls(ofp_event.EventOFPSwitchFeatures, CONFIG_DISPATCHER)
     def switch_features_handler(self, ev):
+        """
+        Se ejecuta cuando un switch OpenFlow se conecta
+        correctamente al controlador.
+        """
 
         datapath = ev.msg.datapath
 
+        #
+        # Registrar datapath para poder enviar posteriormente
+        # FlowMod, StatsRequest, PacketOut, etc.
+        #
+
         self.topology.register_datapath(datapath)
+
+        #
+        # Instalar table-miss.
+        #
+        # Los paquetes que no coincidan con una regla
+        # seran enviados al controlador.
+        #
 
         self.flows.install_table_miss(datapath)
 
     @set_ev_cls(event.EventSwitchEnter)
     @set_ev_cls(event.EventLinkAdd)
     def topology_change_handler(self, ev):
+        """
+        Actualiza el grafo cuando Ryu descubre switches
+        o enlaces nuevos.
+        """
 
         self.topology.update(self)
 
@@ -187,6 +352,19 @@ class RoutingController(app_manager.RyuApp):
 
     @set_ev_cls(ofp_event.EventOFPPacketIn, MAIN_DISPATCHER)
     def packet_in_handler(self, ev):
+        """
+        Procesa paquetes enviados por los switches al controlador.
+
+        Es el punto principal donde:
+
+        - se aprende la ubicacion de los hosts;
+        - se identifica el flujo;
+        - se resuelve su FlowSpecification;
+        - se crea RoutingContext;
+        - se consulta el algoritmo;
+        - se guarda RoutingDecision;
+        - se instalan reglas OpenFlow.
+        """
 
         msg = ev.msg
 
@@ -197,7 +375,9 @@ class RoutingController(app_manager.RyuApp):
         in_port = msg.match["in_port"]
 
         #
+        # ------------------------------------------------------------
         # Decodificar paquete.
+        # ------------------------------------------------------------
         #
 
         pkt = packet.Packet(msg.data)
@@ -208,15 +388,19 @@ class RoutingController(app_manager.RyuApp):
             return
 
         #
-        # LLDP es utilizado por Ryu para
-        # descubrir la topologia.
+        # LLDP es utilizado por Ryu para descubrir
+        # la topologia.
+        #
+        # No debe procesarse como trafico normal.
         #
 
         if eth.ethertype == ether_types.ETH_TYPE_LLDP:
             return
 
         #
+        # ------------------------------------------------------------
         # Crear identidad generica del flujo.
+        # ------------------------------------------------------------
         #
 
         flow = FlowIdentity.from_packet(pkt)
@@ -229,9 +413,26 @@ class RoutingController(app_manager.RyuApp):
         dst = flow.destination_mac
 
         #
-        # Aprender hosts solamente cuando
-        # el paquete entra desde un puerto
-        # que no conecta con otro switch.
+        # ------------------------------------------------------------
+        # Esperar topologia completa.
+        # ------------------------------------------------------------
+        #
+        # Evita aprender como hosts direcciones que aparecen
+        # temporalmente por puertos switch-switch antes de que
+        # Ryu haya terminado de descubrir los enlaces.
+        #
+
+        if not self.topology.is_complete():
+            return
+
+        #
+        # ------------------------------------------------------------
+        # Aprender host origen.
+        # ------------------------------------------------------------
+        #
+        # Solo aprendemos un host cuando el paquete entra
+        # por un puerto que NO corresponde a un enlace
+        # entre switches.
         #
 
         if not self.topology.is_switch_port(dpid, in_port):
@@ -243,17 +444,20 @@ class RoutingController(app_manager.RyuApp):
                 )
 
         #
-        # Si todavia no conocemos el destino,
-        # realizar flooding.
+        # ------------------------------------------------------------
+        # Destino desconocido.
+        # ------------------------------------------------------------
         #
 
         if not self.hosts.is_known(dst):
-            self.flows.flood(msg)
+            self.flooding.flood(msg)
 
             return
 
         #
+        # ------------------------------------------------------------
         # Obtener switches de acceso.
+        # ------------------------------------------------------------
         #
 
         src_switch = self.hosts.get_switch(src)
@@ -261,14 +465,15 @@ class RoutingController(app_manager.RyuApp):
         dst_switch = self.hosts.get_switch(dst)
 
         #
+        # ------------------------------------------------------------
         # Trafico no IP.
+        # ------------------------------------------------------------
         #
-        # ARP y otros protocolos auxiliares
-        # NO deben alterar el estado de los
-        # algoritmos experimentales.
+        # ARP y otros protocolos auxiliares no deben modificar
+        # el estado de los algoritmos experimentales.
         #
-        # Se utiliza shortest path solamente
-        # como forwarding auxiliar.
+        # Utilizamos shortest path exclusivamente como
+        # forwarding auxiliar.
         #
 
         if not flow.is_ip_flow():
@@ -290,11 +495,20 @@ class RoutingController(app_manager.RyuApp):
             return
 
         #
-        # Resolver la especificacion declarativa
-        # correspondiente al flujo, si existe.
+        # ------------------------------------------------------------
+        # Resolver FlowSpecification.
+        # ------------------------------------------------------------
         #
-        # Los flujos inversos o auxiliares pueden
-        # no tener una FlowSpecification asociada.
+        # Busca si el flujo IP observado corresponde a uno
+        # declarado en traffic.config.flows.
+        #
+        # Por ejemplo:
+        #
+        # flow-1:
+        #     h1 -> h3
+        #
+        # Un flujo de respuesta puede no tener una
+        # especificacion declarada.
         #
 
         flow_spec = self.flow_registry.resolve(flow)
@@ -306,8 +520,12 @@ class RoutingController(app_manager.RyuApp):
         self.flow_registry.register_active_flow(flow, specification=flow_spec)
 
         #
-        # Construir contexto generico que sera
-        # entregado al algoritmo de routing.
+        # ------------------------------------------------------------
+        # Construir RoutingContext.
+        # ------------------------------------------------------------
+        #
+        # Esta es la informacion comun que reciben todos
+        # los algoritmos de routing.
         #
 
         context = RoutingContext(
@@ -323,12 +541,11 @@ class RoutingController(app_manager.RyuApp):
         )
 
         #
-        # El controlador actualmente solamente
-        # ejecuta algoritmos per-flow.
+        # ------------------------------------------------------------
+        # Verificar modo de planificacion.
+        # ------------------------------------------------------------
         #
-        # Esta condicion ya fue validada durante
-        # __init__, pero se mantiene explicito el
-        # comportamiento esperado en esta ruta.
+        # PacketIn actualmente ejecuta decisiones per-flow.
         #
 
         if self.scheduling_mode != "per_flow":
@@ -339,10 +556,9 @@ class RoutingController(app_manager.RyuApp):
             )
 
         #
-        # Obtener decision existente segun la
-        # politica declarada por el algoritmo.
-        #
-        # Actualmente solamente soportamos sticky.
+        # ------------------------------------------------------------
+        # Buscar decision existente.
+        # ------------------------------------------------------------
         #
 
         if self.decision_policy == "sticky":
@@ -356,16 +572,16 @@ class RoutingController(app_manager.RyuApp):
             )
 
         #
-        # Una decision solamente es nueva
-        # cuando no existe en RoutingState.
+        # La decision es nueva solamente cuando no existe
+        # dentro de RoutingState.
         #
 
         new_decision = decision is None
 
         #
-        # Ejecutar el algoritmo solamente
-        # para flujos que todavia no tienen
-        # una decision.
+        # ------------------------------------------------------------
+        # Ejecutar algoritmo.
+        # ------------------------------------------------------------
         #
 
         if new_decision:
@@ -380,9 +596,7 @@ class RoutingController(app_manager.RyuApp):
                 return
 
             #
-            # Seguridad:
-            # todo algoritmo debe devolver
-            # RoutingDecision.
+            # Todo algoritmo debe devolver RoutingDecision.
             #
 
             if decision is None:
@@ -393,8 +607,12 @@ class RoutingController(app_manager.RyuApp):
                 )
 
             #
-            # Si el algoritmo rechazo el flujo,
-            # no instalar reglas.
+            # --------------------------------------------------------
+            # Admission control.
+            # --------------------------------------------------------
+            #
+            # Esto deja preparada la infraestructura para
+            # algoritmos que puedan rechazar un flujo.
             #
 
             if not decision.admitted:
@@ -408,8 +626,7 @@ class RoutingController(app_manager.RyuApp):
                 return
 
             #
-            # Una decision admitida debe tener
-            # un camino valido.
+            # Una decision admitida necesita un camino.
             #
 
             if decision.path is None:
@@ -427,8 +644,9 @@ class RoutingController(app_manager.RyuApp):
                 self.routing_state.save_decision(src_switch, dst_switch, flow, decision)
 
         #
-        # Una decision recuperada del cache
-        # tambien debe estar admitida.
+        # ------------------------------------------------------------
+        # Validar decision recuperada.
+        # ------------------------------------------------------------
         #
 
         if not decision.admitted:
@@ -438,11 +656,6 @@ class RoutingController(app_manager.RyuApp):
 
         cost = decision.cost
 
-        #
-        # Seguridad adicional para decisiones
-        # recuperadas del estado de routing.
-        #
-
         if path is None:
             raise ValueError(
                 "El algoritmo '{}' devolvio una decision admitida sin path".format(
@@ -451,12 +664,23 @@ class RoutingController(app_manager.RyuApp):
             )
 
         #
-        # Log solamente para decisiones nuevas.
+        # ------------------------------------------------------------
+        # Log de nueva decision.
+        # ------------------------------------------------------------
         #
 
         if new_decision:
             self.logger.info(
-                "%s: NUEVA DECISION | mac=%s -> %s | ip=%s -> %s | eth_type=%s | proto=%s | sport=%s | dport=%s | s%s -> s%s | path=%s | cost=%s",
+                "%s: NUEVA DECISION | "
+                "mac=%s -> %s | "
+                "ip=%s -> %s | "
+                "eth_type=%s | "
+                "proto=%s | "
+                "sport=%s | "
+                "dport=%s | "
+                "s%s -> s%s | "
+                "path=%s | "
+                "cost=%s",
                 self.routing_name.upper(),
                 flow.source_mac,
                 flow.destination_mac,
@@ -473,8 +697,13 @@ class RoutingController(app_manager.RyuApp):
             )
 
         #
-        # Registrar solamente decisiones nuevas
-        # en routing_decisions.jsonl.
+        # ------------------------------------------------------------
+        # Guardar decision experimental.
+        # ------------------------------------------------------------
+        #
+        # Una linea por nueva decision en:
+        #
+        #     routing_decisions.jsonl
         #
 
         if new_decision:
@@ -488,21 +717,38 @@ class RoutingController(app_manager.RyuApp):
             )
 
         #
-        # Registrar consumo de reglas solamente
-        # para decisiones nuevas.
+        # ------------------------------------------------------------
+        # Registrar consumo de reglas.
+        # ------------------------------------------------------------
         #
 
         if new_decision:
             self.rule_capacity.register_path(path, flow)
 
         #
+        # ------------------------------------------------------------
         # Instalar reglas OpenFlow.
+        # ------------------------------------------------------------
         #
 
         self.flows.install_path(path, flow, self.topology, self.hosts)
 
         #
-        # Reenviar el paquete actual.
+        # ------------------------------------------------------------
+        # Reenviar paquete actual.
+        # ------------------------------------------------------------
         #
 
         self.flows.forward_packet(msg, path, flow, self.topology, self.hosts)
+
+    @set_ev_cls(ofp_event.EventOFPPortStatsReply, MAIN_DISPATCHER)
+    def port_stats_reply_handler(self, ev):
+        """
+        Recibe las estadisticas de puertos solicitadas
+        periodicamente por NetworkMonitor.
+
+        RoutingController solamente recibe el evento y delega
+        el procesamiento al monitor.
+        """
+
+        self.network_monitor.process_port_stats(ev.msg.datapath, ev.msg.body)

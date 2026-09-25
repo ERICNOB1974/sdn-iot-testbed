@@ -1,5 +1,6 @@
 import argparse
 from datetime import datetime
+from datetime import timezone
 
 from common.component_loader import load_collectors
 from common.component_loader import load_traffic_generator
@@ -42,9 +43,9 @@ class ExperimentRunner:
 
         return self.config["traffic"]["config"]
 
-    def build_metadata(self, traffic_result, status):
+    def build_metadata(self, traffic_result, status, error=None):
 
-        end_time = datetime.now().astimezone().isoformat(timespec="seconds")
+        end_time = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
         metadata = {
             "experiment_id": self.config["experiment"]["id"],
@@ -64,11 +65,29 @@ class ExperimentRunner:
             "mininet": self.config["environment"]["mininet"].replace("mininet-", ""),
             "openvswitch": self.openvswitch_version,
             "openflow": self.config["environment"]["openflow"],
-            "traffic": traffic_result.metadata,
         }
 
-        if traffic_result.metrics:
-            metadata["traffic_metrics"] = traffic_result.metrics
+        #
+        # La informacion del trafico solo existe si el generador
+        # alcanzo a producir un TrafficResult.
+        #
+
+        if traffic_result is not None:
+            metadata["traffic"] = traffic_result.metadata
+
+            if traffic_result.metrics:
+                metadata["traffic_metrics"] = traffic_result.metrics
+
+        #
+        # Si el experimento fallo, registrar el tipo y mensaje
+        # de la excepcion que produjo el fallo.
+        #
+
+        if error is not None:
+            metadata["error"] = {
+                "type": type(error).__name__,
+                "message": str(error),
+            }
 
         return metadata
 
@@ -78,49 +97,136 @@ class ExperimentRunner:
 
         print("Ejecutando experimento: {}".format(experiment_id))
 
-        topology = load_topology(self.config)
-
-        self.runtime = NetworkRuntime(
-            topology=topology,
-            controller_config=self.config["controller"],
-            openflow_version=self.config["environment"]["openflow"],
-        )
-
-        traffic_config = self.get_traffic_config()
+        traffic_result = None
 
         try:
+            #
+            # -----------------------------------------------------
+            # 1. CONSTRUIR TOPOLOGIA
+            # -----------------------------------------------------
+            #
+
+            topology = load_topology(self.config)
+
+            #
+            # -----------------------------------------------------
+            # 2. CREAR RUNTIME DE RED
+            # -----------------------------------------------------
+            #
+
+            self.runtime = NetworkRuntime(
+                topology=topology,
+                controller_config=self.config["controller"],
+                openflow_version=self.config["environment"]["openflow"],
+            )
+
+            #
+            # -----------------------------------------------------
+            # 3. INICIAR RED
+            # -----------------------------------------------------
+            #
+
             net = self.runtime.start()
+
+            #
+            # -----------------------------------------------------
+            # 4. EJECUTAR TRAFICO
+            # -----------------------------------------------------
+            #
+
+            traffic_config = self.get_traffic_config()
 
             traffic_generator = load_traffic_generator(self.config["traffic"])
 
             print("Ejecutando generador de trafico")
 
-            traffic_result = traffic_generator(net, traffic_config)
+            traffic_result = traffic_generator(
+                net,
+                traffic_config,
+            )
 
-            traffic_type = traffic_result.metadata.get("type", "traffic")
+            traffic_type = traffic_result.metadata.get(
+                "type",
+                "traffic",
+            )
 
             self.results.write_text(
-                "{}.txt".format(traffic_type), traffic_result.raw_output
+                "{}.txt".format(traffic_type),
+                traffic_result.raw_output,
             )
+
+            #
+            # -----------------------------------------------------
+            # 5. EJECUTAR COLLECTORS
+            # -----------------------------------------------------
+            #
 
             collectors = load_collectors(self.config.get("collectors", []))
 
             for collector_name, collector in collectors:
                 print("Ejecutando collector: {}".format(collector_name))
 
-                collector_result = collector(net, self.config)
-
-                self.results.write_text(
-                    "{}.txt".format(collector_name), collector_result
+                collector_result = collector(
+                    net,
+                    self.config,
                 )
 
+                self.results.write_text(
+                    "{}.txt".format(collector_name),
+                    collector_result,
+                )
+
+            #
+            # -----------------------------------------------------
+            # 6. REGISTRAR EJECUCION EXITOSA
+            # -----------------------------------------------------
+            #
+
             metadata = self.build_metadata(
-                traffic_result=traffic_result, status="success"
+                traffic_result=traffic_result,
+                status="success",
             )
 
-            self.results.write_json("metadata.json", metadata)
+            self.results.write_json(
+                "metadata.json",
+                metadata,
+            )
+
+        except Exception as error:
+            #
+            # -----------------------------------------------------
+            # 7. REGISTRAR EJECUCION FALLIDA
+            # -----------------------------------------------------
+            #
+
+            metadata = self.build_metadata(
+                traffic_result=traffic_result,
+                status="failure",
+                error=error,
+            )
+
+            self.results.write_json(
+                "metadata.json",
+                metadata,
+            )
+
+            #
+            # La excepcion se vuelve a lanzar.
+            #
+            # De esta forma el experimento queda registrado como
+            # fallido y, al mismo tiempo, el proceso termina con
+            # codigo de error.
+            #
+
+            raise
 
         finally:
+            #
+            # -----------------------------------------------------
+            # 8. DETENER INFRAESTRUCTURA
+            # -----------------------------------------------------
+            #
+
             if self.runtime is not None:
                 self.runtime.stop()
 
@@ -130,27 +236,45 @@ def main():
     parser = argparse.ArgumentParser(description="SDN-IoT experiment runner")
 
     parser.add_argument(
-        "--config", required=True, help="Configuracion YAML del experimento"
+        "--config",
+        required=True,
+        help="Configuracion YAML del experimento",
     )
 
     parser.add_argument(
-        "--results-dir", required=True, help="Directorio de resultados del run"
-    )
-
-    parser.add_argument("--run-id", required=True, help="Identificador del run")
-
-    parser.add_argument(
-        "--start-time", required=True, help="Instante de inicio del experimento"
-    )
-
-    parser.add_argument("--git-commit", required=True, help="Commit Git utilizado")
-
-    parser.add_argument(
-        "--controller-version", required=True, help="Version del controlador"
+        "--results-dir",
+        required=True,
+        help="Directorio de resultados del run",
     )
 
     parser.add_argument(
-        "--openvswitch-version", required=True, help="Version de Open vSwitch"
+        "--run-id",
+        required=True,
+        help="Identificador del run",
+    )
+
+    parser.add_argument(
+        "--start-time",
+        required=True,
+        help="Instante de inicio del experimento",
+    )
+
+    parser.add_argument(
+        "--git-commit",
+        required=True,
+        help="Commit Git utilizado",
+    )
+
+    parser.add_argument(
+        "--controller-version",
+        required=True,
+        help="Version del controlador",
+    )
+
+    parser.add_argument(
+        "--openvswitch-version",
+        required=True,
+        help="Version de Open vSwitch",
     )
 
     args = parser.parse_args()

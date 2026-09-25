@@ -93,3 +93,7 @@ class NetworkModel:
             )
 
         return conditions[self.routing_metric]
+
+    def get_switch_link_ids(self):
+
+        return set(self.link_id_by_nodes.values())

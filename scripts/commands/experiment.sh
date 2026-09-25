@@ -96,7 +96,7 @@ RESOLVED_CONFIG_HOST="$RESULTS_DIR/resolved_config.yaml"
 RESOLVED_CONFIG_CONTAINER="/workspace/results/$EXPERIMENT_ID/$RUN_ID/resolved_config.yaml"
 
 
-START_TIME="$(date -Iseconds)"
+START_TIME="$(date -u -Iseconds)"
 
 GIT_COMMIT="$(git rev-parse HEAD 2>/dev/null || echo unknown)"
 

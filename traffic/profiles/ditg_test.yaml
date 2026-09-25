@@ -1,0 +1,19 @@
+traffic:
+  type: ditg
+
+  flows:
+    - id: flow-1
+
+      source: h1
+      destination: h3
+
+      traffic:
+        ip_protocol: 17
+        source_port: 5001
+        destination_port: 6001
+
+        packet_size_bytes: 512
+        rate_pps: 100
+        duration_seconds: 10
+        start_seconds: 0
+        seed: 0.5

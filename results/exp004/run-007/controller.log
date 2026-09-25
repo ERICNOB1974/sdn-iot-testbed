@@ -1,0 +1,424 @@
+loading app controller.routing_controller
+loading app ryu.controller.ofp_handler
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app controller.routing_controller of RoutingController
+Configuracion del experimento: /workspace/results/exp004/run-007/resolved_config.yaml
+Algoritmo de ruteo: dijkstra
+Metrica de ruteo: routing_cost
+Politica de decision: sticky
+Modo de planificacion: per_flow
+instantiating app ryu.controller.ofp_handler of OFPHandler
+instantiating app ryu.topology.switches of Switches
+Grafo actual: []
+Grafo actual: []
+Grafo actual: []
+Grafo actual: []
+Grafo actual: [(4, 3, {'weight': 20, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (4, 2, {'weight': 5, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 5}})]
+Grafo actual: [(4, 3, {'weight': 20, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (4, 2, {'weight': 5, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 5}})]
+Grafo actual: [(1, 3, {'weight': 20, 'port': 102, 'link_id': 's1-s3', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (1, 2, {'weight': 5, 'port': 101, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (2, 4, {'weight': 5, 'port': 2, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (2, 1, {'weight': 5, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (3, 4, {'weight': 20, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (3, 1, {'weight': 20, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (4, 3, {'weight': 20, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (4, 2, {'weight': 5, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 5}})]
+Grafo actual: [(1, 3, {'weight': 20, 'port': 102, 'link_id': 's1-s3', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (1, 2, {'weight': 5, 'port': 101, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (2, 4, {'weight': 5, 'port': 2, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (2, 1, {'weight': 5, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (3, 4, {'weight': 20, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (3, 1, {'weight': 20, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (4, 3, {'weight': 20, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (4, 2, {'weight': 5, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 5}})]
+Grafo actual: [(1, 3, {'weight': 20, 'port': 102, 'link_id': 's1-s3', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (1, 2, {'weight': 5, 'port': 101, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (2, 4, {'weight': 5, 'port': 2, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (2, 1, {'weight': 5, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (3, 4, {'weight': 20, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (3, 1, {'weight': 20, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (4, 3, {'weight': 20, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (4, 2, {'weight': 5, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 5}})]
+Grafo actual: [(1, 3, {'weight': 20, 'port': 102, 'link_id': 's1-s3', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (1, 2, {'weight': 5, 'port': 101, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (2, 4, {'weight': 5, 'port': 2, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (2, 1, {'weight': 5, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (3, 4, {'weight': 20, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (3, 1, {'weight': 20, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (4, 3, {'weight': 20, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (4, 2, {'weight': 5, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 5}})]
+Grafo actual: [(1, 3, {'weight': 20, 'port': 102, 'link_id': 's1-s3', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (1, 2, {'weight': 5, 'port': 101, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (2, 4, {'weight': 5, 'port': 2, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (2, 1, {'weight': 5, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (3, 4, {'weight': 20, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (3, 1, {'weight': 20, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (4, 3, {'weight': 20, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (4, 2, {'weight': 5, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 5}})]
+Grafo actual: [(1, 3, {'weight': 20, 'port': 102, 'link_id': 's1-s3', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (1, 2, {'weight': 5, 'port': 101, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (2, 4, {'weight': 5, 'port': 2, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (2, 1, {'weight': 5, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'routing_cost': 5}}), (3, 4, {'weight': 20, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (3, 1, {'weight': 20, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (4, 3, {'weight': 20, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 20, 'routing_cost': 20}}), (4, 2, {'weight': 5, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'routing_cost': 5}})]
+HOST: 00:00:00:00:00:6e conectado a s4 puerto 12
+HOST: 00:00:00:00:00:6d conectado a s4 puerto 11
+HOST: 00:00:00:00:00:6c conectado a s4 puerto 10
+HOST: 00:00:00:00:00:64 conectado a s1 puerto 100
+HOST: 00:00:00:00:00:5e conectado a s1 puerto 94
+HOST: 00:00:00:00:00:5d conectado a s1 puerto 93
+HOST: 00:00:00:00:00:54 conectado a s1 puerto 84
+HOST: 00:00:00:00:00:53 conectado a s1 puerto 83
+HOST: 00:00:00:00:00:73 conectado a s4 puerto 17
+HOST: 00:00:00:00:00:6a conectado a s4 puerto 8
+HOST: 00:00:00:00:00:74 conectado a s4 puerto 18
+HOST: 00:00:00:00:00:61 conectado a s1 puerto 97
+HOST: 00:00:00:00:00:63 conectado a s1 puerto 99
+HOST: 00:00:00:00:00:56 conectado a s1 puerto 86
+HOST: 00:00:00:00:00:4e conectado a s1 puerto 78
+HOST: 00:00:00:00:00:7c conectado a s4 puerto 26
+HOST: 00:00:00:00:00:67 conectado a s4 puerto 5
+HOST: 00:00:00:00:00:6b conectado a s4 puerto 9
+HOST: 00:00:00:00:00:6f conectado a s4 puerto 13
+HOST: 00:00:00:00:00:75 conectado a s4 puerto 19
+HOST: 00:00:00:00:00:7a conectado a s4 puerto 24
+HOST: 00:00:00:00:00:77 conectado a s4 puerto 21
+HOST: 00:00:00:00:00:70 conectado a s4 puerto 14
+HOST: 00:00:00:00:00:81 conectado a s4 puerto 31
+HOST: 00:00:00:00:00:83 conectado a s4 puerto 33
+HOST: 00:00:00:00:00:87 conectado a s4 puerto 37
+HOST: 00:00:00:00:00:8e conectado a s4 puerto 44
+HOST: 00:00:00:00:00:01 conectado a s1 puerto 1
+HOST: 00:00:00:00:00:65 conectado a s4 puerto 3
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:01 -> 00:00:00:00:00:65 | ip=10.0.0.1 -> 10.0.0.101 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:65 -> 00:00:00:00:00:01 | ip=10.0.0.101 -> 10.0.0.1 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+HOST: 00:00:00:00:00:32 conectado a s1 puerto 50
+HOST: 00:00:00:00:00:25 conectado a s1 puerto 37
+HOST: 00:00:00:00:00:0b conectado a s1 puerto 11
+HOST: 00:00:00:00:00:09 conectado a s1 puerto 9
+HOST: 00:00:00:00:00:02 conectado a s1 puerto 2
+HOST: 00:00:00:00:00:66 conectado a s4 puerto 4
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:02 -> 00:00:00:00:00:66 | ip=10.0.0.2 -> 10.0.0.102 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:66 -> 00:00:00:00:00:02 | ip=10.0.0.102 -> 10.0.0.2 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+HOST: 00:00:00:00:00:1c conectado a s1 puerto 28
+HOST: 00:00:00:00:00:26 conectado a s1 puerto 38
+HOST: 00:00:00:00:00:52 conectado a s1 puerto 82
+HOST: 00:00:00:00:00:0a conectado a s1 puerto 10
+HOST: 00:00:00:00:00:0e conectado a s1 puerto 14
+HOST: 00:00:00:00:00:06 conectado a s1 puerto 6
+HOST: 00:00:00:00:00:1a conectado a s1 puerto 26
+HOST: 00:00:00:00:00:2e conectado a s1 puerto 46
+HOST: 00:00:00:00:00:3c conectado a s1 puerto 60
+HOST: 00:00:00:00:00:1b conectado a s1 puerto 27
+HOST: 00:00:00:00:00:3a conectado a s1 puerto 58
+HOST: 00:00:00:00:00:1f conectado a s1 puerto 31
+HOST: 00:00:00:00:00:2d conectado a s1 puerto 45
+HOST: 00:00:00:00:00:12 conectado a s1 puerto 18
+HOST: 00:00:00:00:00:10 conectado a s1 puerto 16
+HOST: 00:00:00:00:00:0d conectado a s1 puerto 13
+HOST: 00:00:00:00:00:2b conectado a s1 puerto 43
+HOST: 00:00:00:00:00:05 conectado a s1 puerto 5
+HOST: 00:00:00:00:00:44 conectado a s1 puerto 68
+HOST: 00:00:00:00:00:08 conectado a s1 puerto 8
+HOST: 00:00:00:00:00:57 conectado a s1 puerto 87
+HOST: 00:00:00:00:00:60 conectado a s1 puerto 96
+HOST: 00:00:00:00:00:03 conectado a s1 puerto 3
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:03 -> 00:00:00:00:00:67 | ip=10.0.0.3 -> 10.0.0.103 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:67 -> 00:00:00:00:00:03 | ip=10.0.0.103 -> 10.0.0.3 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+HOST: 00:00:00:00:00:68 conectado a s4 puerto 6
+HOST: 00:00:00:00:00:21 conectado a s1 puerto 33
+HOST: 00:00:00:00:00:17 conectado a s1 puerto 23
+HOST: 00:00:00:00:00:0f conectado a s1 puerto 15
+HOST: 00:00:00:00:00:29 conectado a s1 puerto 41
+HOST: 00:00:00:00:00:2c conectado a s1 puerto 44
+HOST: 00:00:00:00:00:07 conectado a s1 puerto 7
+HOST: 00:00:00:00:00:16 conectado a s1 puerto 22
+HOST: 00:00:00:00:00:4c conectado a s1 puerto 76
+HOST: 00:00:00:00:00:4d conectado a s1 puerto 77
+HOST: 00:00:00:00:00:3f conectado a s1 puerto 63
+HOST: 00:00:00:00:00:2f conectado a s1 puerto 47
+HOST: 00:00:00:00:00:15 conectado a s1 puerto 21
+HOST: 00:00:00:00:00:0c conectado a s1 puerto 12
+HOST: 00:00:00:00:00:43 conectado a s1 puerto 67
+HOST: 00:00:00:00:00:22 conectado a s1 puerto 34
+HOST: 00:00:00:00:00:80 conectado a s4 puerto 30
+HOST: 00:00:00:00:00:69 conectado a s4 puerto 7
+HOST: 00:00:00:00:00:51 conectado a s1 puerto 81
+HOST: 00:00:00:00:00:5a conectado a s1 puerto 90
+HOST: 00:00:00:00:00:14 conectado a s1 puerto 20
+HOST: 00:00:00:00:00:13 conectado a s1 puerto 19
+HOST: 00:00:00:00:00:41 conectado a s1 puerto 65
+HOST: 00:00:00:00:00:31 conectado a s1 puerto 49
+HOST: 00:00:00:00:00:39 conectado a s1 puerto 57
+HOST: 00:00:00:00:00:84 conectado a s4 puerto 34
+HOST: 00:00:00:00:00:23 conectado a s1 puerto 35
+HOST: 00:00:00:00:00:38 conectado a s1 puerto 56
+HOST: 00:00:00:00:00:58 conectado a s1 puerto 88
+HOST: 00:00:00:00:00:34 conectado a s1 puerto 52
+HOST: 00:00:00:00:00:20 conectado a s1 puerto 32
+HOST: 00:00:00:00:00:27 conectado a s1 puerto 39
+HOST: 00:00:00:00:00:11 conectado a s1 puerto 17
+HOST: 00:00:00:00:00:2a conectado a s1 puerto 42
+HOST: 00:00:00:00:00:46 conectado a s1 puerto 70
+HOST: 00:00:00:00:00:18 conectado a s1 puerto 24
+HOST: 00:00:00:00:00:1e conectado a s1 puerto 30
+HOST: 00:00:00:00:00:04 conectado a s1 puerto 4
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:04 -> 00:00:00:00:00:68 | ip=10.0.0.4 -> 10.0.0.104 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:68 -> 00:00:00:00:00:04 | ip=10.0.0.104 -> 10.0.0.4 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+HOST: 00:00:00:00:00:88 conectado a s4 puerto 38
+HOST: 00:00:00:00:00:71 conectado a s4 puerto 15
+HOST: 00:00:00:00:00:ae conectado a s4 puerto 76
+HOST: 00:00:00:00:00:b0 conectado a s4 puerto 78
+HOST: 00:00:00:00:00:91 conectado a s4 puerto 47
+HOST: 00:00:00:00:00:5f conectado a s1 puerto 95
+HOST: 00:00:00:00:00:5c conectado a s1 puerto 92
+HOST: 00:00:00:00:00:40 conectado a s1 puerto 64
+HOST: 00:00:00:00:00:59 conectado a s1 puerto 89
+HOST: 00:00:00:00:00:1d conectado a s1 puerto 29
+HOST: 00:00:00:00:00:50 conectado a s1 puerto 80
+HOST: 00:00:00:00:00:24 conectado a s1 puerto 36
+HOST: 00:00:00:00:00:19 conectado a s1 puerto 25
+HOST: 00:00:00:00:00:3e conectado a s1 puerto 62
+HOST: 00:00:00:00:00:37 conectado a s1 puerto 55
+HOST: 00:00:00:00:00:9a conectado a s4 puerto 56
+HOST: 00:00:00:00:00:92 conectado a s4 puerto 48
+HOST: 00:00:00:00:00:9b conectado a s4 puerto 57
+HOST: 00:00:00:00:00:9f conectado a s4 puerto 61
+HOST: 00:00:00:00:00:5b conectado a s1 puerto 91
+HOST: 00:00:00:00:00:3d conectado a s1 puerto 61
+HOST: 00:00:00:00:00:b9 conectado a s4 puerto 87
+HOST: 00:00:00:00:00:b2 conectado a s4 puerto 80
+HOST: 00:00:00:00:00:78 conectado a s4 puerto 22
+HOST: 00:00:00:00:00:93 conectado a s4 puerto 49
+HOST: 00:00:00:00:00:c0 conectado a s4 puerto 94
+HOST: 00:00:00:00:00:7b conectado a s4 puerto 25
+HOST: 00:00:00:00:00:9e conectado a s4 puerto 60
+HOST: 00:00:00:00:00:ac conectado a s4 puerto 74
+HOST: 00:00:00:00:00:9d conectado a s4 puerto 59
+HOST: 00:00:00:00:00:3b conectado a s1 puerto 59
+HOST: 00:00:00:00:00:35 conectado a s1 puerto 53
+HOST: 00:00:00:00:00:47 conectado a s1 puerto 71
+HOST: 00:00:00:00:00:4f conectado a s1 puerto 79
+HOST: 00:00:00:00:00:72 conectado a s4 puerto 16
+HOST: 00:00:00:00:00:ab conectado a s4 puerto 73
+HOST: 00:00:00:00:00:c1 conectado a s4 puerto 95
+HOST: 00:00:00:00:00:a5 conectado a s4 puerto 67
+HOST: 00:00:00:00:00:a7 conectado a s4 puerto 69
+HOST: 00:00:00:00:00:8c conectado a s4 puerto 42
+HOST: 00:00:00:00:00:49 conectado a s1 puerto 73
+HOST: 00:00:00:00:00:55 conectado a s1 puerto 85
+HOST: 00:00:00:00:00:4a conectado a s1 puerto 74
+HOST: 00:00:00:00:00:36 conectado a s1 puerto 54
+HOST: 00:00:00:00:00:33 conectado a s1 puerto 51
+HOST: 00:00:00:00:00:30 conectado a s1 puerto 48
+HOST: 00:00:00:00:00:62 conectado a s1 puerto 98
+HOST: 00:00:00:00:00:28 conectado a s1 puerto 40
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:05 -> 00:00:00:00:00:69 | ip=10.0.0.5 -> 10.0.0.105 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:69 -> 00:00:00:00:00:05 | ip=10.0.0.105 -> 10.0.0.5 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+HOST: 00:00:00:00:00:8d conectado a s4 puerto 43
+HOST: 00:00:00:00:00:8f conectado a s4 puerto 45
+HOST: 00:00:00:00:00:90 conectado a s4 puerto 46
+HOST: 00:00:00:00:00:7f conectado a s4 puerto 29
+HOST: 00:00:00:00:00:89 conectado a s4 puerto 39
+HOST: 00:00:00:00:00:bd conectado a s4 puerto 91
+HOST: 00:00:00:00:00:42 conectado a s1 puerto 66
+HOST: 00:00:00:00:00:48 conectado a s1 puerto 72
+HOST: 00:00:00:00:00:4b conectado a s1 puerto 75
+HOST: 00:00:00:00:00:b6 conectado a s4 puerto 84
+HOST: 00:00:00:00:00:79 conectado a s4 puerto 23
+HOST: 00:00:00:00:00:45 conectado a s1 puerto 69
+HOST: 00:00:00:00:00:bf conectado a s4 puerto 93
+HOST: 00:00:00:00:00:b3 conectado a s4 puerto 81
+HOST: 00:00:00:00:00:aa conectado a s4 puerto 72
+HOST: 00:00:00:00:00:c8 conectado a s4 puerto 102
+HOST: 00:00:00:00:00:82 conectado a s4 puerto 32
+HOST: 00:00:00:00:00:b4 conectado a s4 puerto 82
+HOST: 00:00:00:00:00:c3 conectado a s4 puerto 97
+HOST: 00:00:00:00:00:97 conectado a s4 puerto 53
+HOST: 00:00:00:00:00:c7 conectado a s4 puerto 101
+HOST: 00:00:00:00:00:b7 conectado a s4 puerto 85
+HOST: 00:00:00:00:00:ba conectado a s4 puerto 88
+HOST: 00:00:00:00:00:c2 conectado a s4 puerto 96
+HOST: 00:00:00:00:00:7d conectado a s4 puerto 27
+HOST: 00:00:00:00:00:85 conectado a s4 puerto 35
+HOST: 00:00:00:00:00:b8 conectado a s4 puerto 86
+HOST: 00:00:00:00:00:8a conectado a s4 puerto 40
+HOST: 00:00:00:00:00:86 conectado a s4 puerto 36
+HOST: 00:00:00:00:00:96 conectado a s4 puerto 52
+HOST: 00:00:00:00:00:76 conectado a s4 puerto 20
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:06 -> 00:00:00:00:00:6a | ip=10.0.0.6 -> 10.0.0.106 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:6a -> 00:00:00:00:00:06 | ip=10.0.0.106 -> 10.0.0.6 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+HOST: 00:00:00:00:00:a9 conectado a s4 puerto 71
+HOST: 00:00:00:00:00:a4 conectado a s4 puerto 66
+HOST: 00:00:00:00:00:94 conectado a s4 puerto 50
+HOST: 00:00:00:00:00:a1 conectado a s4 puerto 63
+HOST: 00:00:00:00:00:b1 conectado a s4 puerto 79
+HOST: 00:00:00:00:00:be conectado a s4 puerto 92
+HOST: 00:00:00:00:00:99 conectado a s4 puerto 55
+HOST: 00:00:00:00:00:95 conectado a s4 puerto 51
+HOST: 00:00:00:00:00:c5 conectado a s4 puerto 99
+HOST: 00:00:00:00:00:a8 conectado a s4 puerto 70
+HOST: 00:00:00:00:00:9c conectado a s4 puerto 58
+HOST: 00:00:00:00:00:7e conectado a s4 puerto 28
+HOST: 00:00:00:00:00:bc conectado a s4 puerto 90
+HOST: 00:00:00:00:00:c4 conectado a s4 puerto 98
+HOST: 00:00:00:00:00:a3 conectado a s4 puerto 65
+HOST: 00:00:00:00:00:a2 conectado a s4 puerto 64
+HOST: 00:00:00:00:00:af conectado a s4 puerto 77
+HOST: 00:00:00:00:00:8b conectado a s4 puerto 41
+HOST: 00:00:00:00:00:a6 conectado a s4 puerto 68
+HOST: 00:00:00:00:00:bb conectado a s4 puerto 89
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:07 -> 00:00:00:00:00:6b | ip=10.0.0.7 -> 10.0.0.107 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:6b -> 00:00:00:00:00:07 | ip=10.0.0.107 -> 10.0.0.7 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+HOST: 00:00:00:00:00:a0 conectado a s4 puerto 62
+HOST: 00:00:00:00:00:98 conectado a s4 puerto 54
+HOST: 00:00:00:00:00:ad conectado a s4 puerto 75
+HOST: 00:00:00:00:00:c6 conectado a s4 puerto 100
+HOST: 00:00:00:00:00:b5 conectado a s4 puerto 83
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:08 -> 00:00:00:00:00:6c | ip=10.0.0.8 -> 10.0.0.108 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:6c -> 00:00:00:00:00:08 | ip=10.0.0.108 -> 10.0.0.8 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:09 -> 00:00:00:00:00:6d | ip=10.0.0.9 -> 10.0.0.109 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:6d -> 00:00:00:00:00:09 | ip=10.0.0.109 -> 10.0.0.9 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:0a -> 00:00:00:00:00:6e | ip=10.0.0.10 -> 10.0.0.110 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:6e -> 00:00:00:00:00:0a | ip=10.0.0.110 -> 10.0.0.10 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:0b -> 00:00:00:00:00:6f | ip=10.0.0.11 -> 10.0.0.111 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:6f -> 00:00:00:00:00:0b | ip=10.0.0.111 -> 10.0.0.11 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:0c -> 00:00:00:00:00:70 | ip=10.0.0.12 -> 10.0.0.112 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:70 -> 00:00:00:00:00:0c | ip=10.0.0.112 -> 10.0.0.12 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:0d -> 00:00:00:00:00:71 | ip=10.0.0.13 -> 10.0.0.113 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:71 -> 00:00:00:00:00:0d | ip=10.0.0.113 -> 10.0.0.13 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:0e -> 00:00:00:00:00:72 | ip=10.0.0.14 -> 10.0.0.114 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:72 -> 00:00:00:00:00:0e | ip=10.0.0.114 -> 10.0.0.14 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:0f -> 00:00:00:00:00:73 | ip=10.0.0.15 -> 10.0.0.115 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:73 -> 00:00:00:00:00:0f | ip=10.0.0.115 -> 10.0.0.15 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:10 -> 00:00:00:00:00:74 | ip=10.0.0.16 -> 10.0.0.116 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:74 -> 00:00:00:00:00:10 | ip=10.0.0.116 -> 10.0.0.16 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:11 -> 00:00:00:00:00:75 | ip=10.0.0.17 -> 10.0.0.117 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:75 -> 00:00:00:00:00:11 | ip=10.0.0.117 -> 10.0.0.17 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:12 -> 00:00:00:00:00:76 | ip=10.0.0.18 -> 10.0.0.118 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:76 -> 00:00:00:00:00:12 | ip=10.0.0.118 -> 10.0.0.18 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:13 -> 00:00:00:00:00:77 | ip=10.0.0.19 -> 10.0.0.119 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:77 -> 00:00:00:00:00:13 | ip=10.0.0.119 -> 10.0.0.19 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:14 -> 00:00:00:00:00:78 | ip=10.0.0.20 -> 10.0.0.120 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:78 -> 00:00:00:00:00:14 | ip=10.0.0.120 -> 10.0.0.20 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:15 -> 00:00:00:00:00:79 | ip=10.0.0.21 -> 10.0.0.121 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:79 -> 00:00:00:00:00:15 | ip=10.0.0.121 -> 10.0.0.21 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:16 -> 00:00:00:00:00:7a | ip=10.0.0.22 -> 10.0.0.122 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:7a -> 00:00:00:00:00:16 | ip=10.0.0.122 -> 10.0.0.22 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:17 -> 00:00:00:00:00:7b | ip=10.0.0.23 -> 10.0.0.123 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:7b -> 00:00:00:00:00:17 | ip=10.0.0.123 -> 10.0.0.23 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:18 -> 00:00:00:00:00:7c | ip=10.0.0.24 -> 10.0.0.124 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:7c -> 00:00:00:00:00:18 | ip=10.0.0.124 -> 10.0.0.24 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:19 -> 00:00:00:00:00:7d | ip=10.0.0.25 -> 10.0.0.125 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:7d -> 00:00:00:00:00:19 | ip=10.0.0.125 -> 10.0.0.25 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:1a -> 00:00:00:00:00:7e | ip=10.0.0.26 -> 10.0.0.126 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:7e -> 00:00:00:00:00:1a | ip=10.0.0.126 -> 10.0.0.26 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:1b -> 00:00:00:00:00:7f | ip=10.0.0.27 -> 10.0.0.127 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:7f -> 00:00:00:00:00:1b | ip=10.0.0.127 -> 10.0.0.27 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:1c -> 00:00:00:00:00:80 | ip=10.0.0.28 -> 10.0.0.128 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:80 -> 00:00:00:00:00:1c | ip=10.0.0.128 -> 10.0.0.28 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:1d -> 00:00:00:00:00:81 | ip=10.0.0.29 -> 10.0.0.129 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:81 -> 00:00:00:00:00:1d | ip=10.0.0.129 -> 10.0.0.29 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:1e -> 00:00:00:00:00:82 | ip=10.0.0.30 -> 10.0.0.130 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:82 -> 00:00:00:00:00:1e | ip=10.0.0.130 -> 10.0.0.30 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:1f -> 00:00:00:00:00:83 | ip=10.0.0.31 -> 10.0.0.131 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:83 -> 00:00:00:00:00:1f | ip=10.0.0.131 -> 10.0.0.31 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:20 -> 00:00:00:00:00:84 | ip=10.0.0.32 -> 10.0.0.132 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:84 -> 00:00:00:00:00:20 | ip=10.0.0.132 -> 10.0.0.32 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:21 -> 00:00:00:00:00:85 | ip=10.0.0.33 -> 10.0.0.133 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:85 -> 00:00:00:00:00:21 | ip=10.0.0.133 -> 10.0.0.33 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:22 -> 00:00:00:00:00:86 | ip=10.0.0.34 -> 10.0.0.134 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:86 -> 00:00:00:00:00:22 | ip=10.0.0.134 -> 10.0.0.34 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:23 -> 00:00:00:00:00:87 | ip=10.0.0.35 -> 10.0.0.135 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:87 -> 00:00:00:00:00:23 | ip=10.0.0.135 -> 10.0.0.35 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:24 -> 00:00:00:00:00:88 | ip=10.0.0.36 -> 10.0.0.136 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:88 -> 00:00:00:00:00:24 | ip=10.0.0.136 -> 10.0.0.36 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:25 -> 00:00:00:00:00:89 | ip=10.0.0.37 -> 10.0.0.137 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:89 -> 00:00:00:00:00:25 | ip=10.0.0.137 -> 10.0.0.37 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:26 -> 00:00:00:00:00:8a | ip=10.0.0.38 -> 10.0.0.138 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:8a -> 00:00:00:00:00:26 | ip=10.0.0.138 -> 10.0.0.38 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:27 -> 00:00:00:00:00:8b | ip=10.0.0.39 -> 10.0.0.139 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:8b -> 00:00:00:00:00:27 | ip=10.0.0.139 -> 10.0.0.39 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:28 -> 00:00:00:00:00:8c | ip=10.0.0.40 -> 10.0.0.140 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:8c -> 00:00:00:00:00:28 | ip=10.0.0.140 -> 10.0.0.40 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:29 -> 00:00:00:00:00:8d | ip=10.0.0.41 -> 10.0.0.141 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:8d -> 00:00:00:00:00:29 | ip=10.0.0.141 -> 10.0.0.41 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:2a -> 00:00:00:00:00:8e | ip=10.0.0.42 -> 10.0.0.142 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:8e -> 00:00:00:00:00:2a | ip=10.0.0.142 -> 10.0.0.42 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:2b -> 00:00:00:00:00:8f | ip=10.0.0.43 -> 10.0.0.143 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:8f -> 00:00:00:00:00:2b | ip=10.0.0.143 -> 10.0.0.43 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:2c -> 00:00:00:00:00:90 | ip=10.0.0.44 -> 10.0.0.144 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:90 -> 00:00:00:00:00:2c | ip=10.0.0.144 -> 10.0.0.44 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:2d -> 00:00:00:00:00:91 | ip=10.0.0.45 -> 10.0.0.145 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:91 -> 00:00:00:00:00:2d | ip=10.0.0.145 -> 10.0.0.45 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:2e -> 00:00:00:00:00:92 | ip=10.0.0.46 -> 10.0.0.146 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:92 -> 00:00:00:00:00:2e | ip=10.0.0.146 -> 10.0.0.46 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:2f -> 00:00:00:00:00:93 | ip=10.0.0.47 -> 10.0.0.147 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:93 -> 00:00:00:00:00:2f | ip=10.0.0.147 -> 10.0.0.47 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:30 -> 00:00:00:00:00:94 | ip=10.0.0.48 -> 10.0.0.148 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:94 -> 00:00:00:00:00:30 | ip=10.0.0.148 -> 10.0.0.48 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:31 -> 00:00:00:00:00:95 | ip=10.0.0.49 -> 10.0.0.149 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:95 -> 00:00:00:00:00:31 | ip=10.0.0.149 -> 10.0.0.49 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:32 -> 00:00:00:00:00:96 | ip=10.0.0.50 -> 10.0.0.150 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:96 -> 00:00:00:00:00:32 | ip=10.0.0.150 -> 10.0.0.50 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:33 -> 00:00:00:00:00:97 | ip=10.0.0.51 -> 10.0.0.151 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:97 -> 00:00:00:00:00:33 | ip=10.0.0.151 -> 10.0.0.51 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:34 -> 00:00:00:00:00:98 | ip=10.0.0.52 -> 10.0.0.152 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:98 -> 00:00:00:00:00:34 | ip=10.0.0.152 -> 10.0.0.52 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:35 -> 00:00:00:00:00:99 | ip=10.0.0.53 -> 10.0.0.153 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:99 -> 00:00:00:00:00:35 | ip=10.0.0.153 -> 10.0.0.53 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:36 -> 00:00:00:00:00:9a | ip=10.0.0.54 -> 10.0.0.154 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:9a -> 00:00:00:00:00:36 | ip=10.0.0.154 -> 10.0.0.54 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:37 -> 00:00:00:00:00:9b | ip=10.0.0.55 -> 10.0.0.155 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:9b -> 00:00:00:00:00:37 | ip=10.0.0.155 -> 10.0.0.55 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:38 -> 00:00:00:00:00:9c | ip=10.0.0.56 -> 10.0.0.156 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:9c -> 00:00:00:00:00:38 | ip=10.0.0.156 -> 10.0.0.56 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:39 -> 00:00:00:00:00:9d | ip=10.0.0.57 -> 10.0.0.157 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:9d -> 00:00:00:00:00:39 | ip=10.0.0.157 -> 10.0.0.57 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:3a -> 00:00:00:00:00:9e | ip=10.0.0.58 -> 10.0.0.158 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:9e -> 00:00:00:00:00:3a | ip=10.0.0.158 -> 10.0.0.58 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:3b -> 00:00:00:00:00:9f | ip=10.0.0.59 -> 10.0.0.159 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:9f -> 00:00:00:00:00:3b | ip=10.0.0.159 -> 10.0.0.59 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:3c -> 00:00:00:00:00:a0 | ip=10.0.0.60 -> 10.0.0.160 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:a0 -> 00:00:00:00:00:3c | ip=10.0.0.160 -> 10.0.0.60 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:3d -> 00:00:00:00:00:a1 | ip=10.0.0.61 -> 10.0.0.161 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:a1 -> 00:00:00:00:00:3d | ip=10.0.0.161 -> 10.0.0.61 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:3e -> 00:00:00:00:00:a2 | ip=10.0.0.62 -> 10.0.0.162 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:a2 -> 00:00:00:00:00:3e | ip=10.0.0.162 -> 10.0.0.62 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:3f -> 00:00:00:00:00:a3 | ip=10.0.0.63 -> 10.0.0.163 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:a3 -> 00:00:00:00:00:3f | ip=10.0.0.163 -> 10.0.0.63 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:40 -> 00:00:00:00:00:a4 | ip=10.0.0.64 -> 10.0.0.164 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:a4 -> 00:00:00:00:00:40 | ip=10.0.0.164 -> 10.0.0.64 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:41 -> 00:00:00:00:00:a5 | ip=10.0.0.65 -> 10.0.0.165 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:a5 -> 00:00:00:00:00:41 | ip=10.0.0.165 -> 10.0.0.65 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:42 -> 00:00:00:00:00:a6 | ip=10.0.0.66 -> 10.0.0.166 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:a6 -> 00:00:00:00:00:42 | ip=10.0.0.166 -> 10.0.0.66 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:43 -> 00:00:00:00:00:a7 | ip=10.0.0.67 -> 10.0.0.167 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:a7 -> 00:00:00:00:00:43 | ip=10.0.0.167 -> 10.0.0.67 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:44 -> 00:00:00:00:00:a8 | ip=10.0.0.68 -> 10.0.0.168 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:a8 -> 00:00:00:00:00:44 | ip=10.0.0.168 -> 10.0.0.68 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:45 -> 00:00:00:00:00:a9 | ip=10.0.0.69 -> 10.0.0.169 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:a9 -> 00:00:00:00:00:45 | ip=10.0.0.169 -> 10.0.0.69 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:46 -> 00:00:00:00:00:aa | ip=10.0.0.70 -> 10.0.0.170 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:aa -> 00:00:00:00:00:46 | ip=10.0.0.170 -> 10.0.0.70 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:47 -> 00:00:00:00:00:ab | ip=10.0.0.71 -> 10.0.0.171 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:ab -> 00:00:00:00:00:47 | ip=10.0.0.171 -> 10.0.0.71 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:48 -> 00:00:00:00:00:ac | ip=10.0.0.72 -> 10.0.0.172 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:ac -> 00:00:00:00:00:48 | ip=10.0.0.172 -> 10.0.0.72 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:49 -> 00:00:00:00:00:ad | ip=10.0.0.73 -> 10.0.0.173 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:ad -> 00:00:00:00:00:49 | ip=10.0.0.173 -> 10.0.0.73 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:4a -> 00:00:00:00:00:ae | ip=10.0.0.74 -> 10.0.0.174 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:ae -> 00:00:00:00:00:4a | ip=10.0.0.174 -> 10.0.0.74 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:4b -> 00:00:00:00:00:af | ip=10.0.0.75 -> 10.0.0.175 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:af -> 00:00:00:00:00:4b | ip=10.0.0.175 -> 10.0.0.75 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:4c -> 00:00:00:00:00:b0 | ip=10.0.0.76 -> 10.0.0.176 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:b0 -> 00:00:00:00:00:4c | ip=10.0.0.176 -> 10.0.0.76 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:4d -> 00:00:00:00:00:b1 | ip=10.0.0.77 -> 10.0.0.177 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:b1 -> 00:00:00:00:00:4d | ip=10.0.0.177 -> 10.0.0.77 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:4e -> 00:00:00:00:00:b2 | ip=10.0.0.78 -> 10.0.0.178 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:b2 -> 00:00:00:00:00:4e | ip=10.0.0.178 -> 10.0.0.78 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:4f -> 00:00:00:00:00:b3 | ip=10.0.0.79 -> 10.0.0.179 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:b3 -> 00:00:00:00:00:4f | ip=10.0.0.179 -> 10.0.0.79 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:50 -> 00:00:00:00:00:b4 | ip=10.0.0.80 -> 10.0.0.180 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:b4 -> 00:00:00:00:00:50 | ip=10.0.0.180 -> 10.0.0.80 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:51 -> 00:00:00:00:00:b5 | ip=10.0.0.81 -> 10.0.0.181 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:b5 -> 00:00:00:00:00:51 | ip=10.0.0.181 -> 10.0.0.81 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:52 -> 00:00:00:00:00:b6 | ip=10.0.0.82 -> 10.0.0.182 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:b6 -> 00:00:00:00:00:52 | ip=10.0.0.182 -> 10.0.0.82 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:53 -> 00:00:00:00:00:b7 | ip=10.0.0.83 -> 10.0.0.183 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:b7 -> 00:00:00:00:00:53 | ip=10.0.0.183 -> 10.0.0.83 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:54 -> 00:00:00:00:00:b8 | ip=10.0.0.84 -> 10.0.0.184 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:b8 -> 00:00:00:00:00:54 | ip=10.0.0.184 -> 10.0.0.84 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:55 -> 00:00:00:00:00:b9 | ip=10.0.0.85 -> 10.0.0.185 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:b9 -> 00:00:00:00:00:55 | ip=10.0.0.185 -> 10.0.0.85 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:56 -> 00:00:00:00:00:ba | ip=10.0.0.86 -> 10.0.0.186 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:ba -> 00:00:00:00:00:56 | ip=10.0.0.186 -> 10.0.0.86 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:57 -> 00:00:00:00:00:bb | ip=10.0.0.87 -> 10.0.0.187 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:bb -> 00:00:00:00:00:57 | ip=10.0.0.187 -> 10.0.0.87 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:58 -> 00:00:00:00:00:bc | ip=10.0.0.88 -> 10.0.0.188 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:bc -> 00:00:00:00:00:58 | ip=10.0.0.188 -> 10.0.0.88 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:59 -> 00:00:00:00:00:bd | ip=10.0.0.89 -> 10.0.0.189 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:bd -> 00:00:00:00:00:59 | ip=10.0.0.189 -> 10.0.0.89 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:5a -> 00:00:00:00:00:be | ip=10.0.0.90 -> 10.0.0.190 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:be -> 00:00:00:00:00:5a | ip=10.0.0.190 -> 10.0.0.90 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:5b -> 00:00:00:00:00:bf | ip=10.0.0.91 -> 10.0.0.191 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:bf -> 00:00:00:00:00:5b | ip=10.0.0.191 -> 10.0.0.91 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:5c -> 00:00:00:00:00:c0 | ip=10.0.0.92 -> 10.0.0.192 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:c0 -> 00:00:00:00:00:5c | ip=10.0.0.192 -> 10.0.0.92 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:5d -> 00:00:00:00:00:c1 | ip=10.0.0.93 -> 10.0.0.193 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:c1 -> 00:00:00:00:00:5d | ip=10.0.0.193 -> 10.0.0.93 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:5e -> 00:00:00:00:00:c2 | ip=10.0.0.94 -> 10.0.0.194 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:c2 -> 00:00:00:00:00:5e | ip=10.0.0.194 -> 10.0.0.94 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:5f -> 00:00:00:00:00:c3 | ip=10.0.0.95 -> 10.0.0.195 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:c3 -> 00:00:00:00:00:5f | ip=10.0.0.195 -> 10.0.0.95 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:60 -> 00:00:00:00:00:c4 | ip=10.0.0.96 -> 10.0.0.196 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:c4 -> 00:00:00:00:00:60 | ip=10.0.0.196 -> 10.0.0.96 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:61 -> 00:00:00:00:00:c5 | ip=10.0.0.97 -> 10.0.0.197 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:c5 -> 00:00:00:00:00:61 | ip=10.0.0.197 -> 10.0.0.97 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:62 -> 00:00:00:00:00:c6 | ip=10.0.0.98 -> 10.0.0.198 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:c6 -> 00:00:00:00:00:62 | ip=10.0.0.198 -> 10.0.0.98 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:63 -> 00:00:00:00:00:c7 | ip=10.0.0.99 -> 10.0.0.199 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:c7 -> 00:00:00:00:00:63 | ip=10.0.0.199 -> 10.0.0.99 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:64 -> 00:00:00:00:00:c8 | ip=10.0.0.100 -> 10.0.0.200 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=10
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:c8 -> 00:00:00:00:00:64 | ip=10.0.0.200 -> 10.0.0.100 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=10

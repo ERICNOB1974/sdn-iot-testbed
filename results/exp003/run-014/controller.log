@@ -1,0 +1,149 @@
+loading app controller.routing_controller
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app controller.routing_controller of RoutingController
+Configuracion del experimento: /workspace/results/exp003/run-014/resolved_config.yaml
+Algoritmo de ruteo: dijkstra
+Metrica de ruteo: routing_cost
+Politica de decision: sticky
+Modo de planificacion: per_flow
+instantiating app ryu.topology.switches of Switches
+instantiating app ryu.controller.ofp_handler of OFPHandler
+NETWORK MONITOR: tick | datapaths=[]
+Grafo actual: []
+Grafo actual: []
+Grafo actual: [(2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (3, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (1, 3, {'weight': 10, 'port': 4, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (3, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (1, 3, {'weight': 10, 'port': 4, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (3, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (1, 3, {'weight': 10, 'port': 4, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (3, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (4, 2, {'weight': 10, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (1, 3, {'weight': 10, 'port': 4, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (2, 4, {'weight': 10, 'port': 2, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (3, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (4, 2, {'weight': 10, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (1, 3, {'weight': 10, 'port': 4, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (2, 4, {'weight': 10, 'port': 2, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (3, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (4, 2, {'weight': 10, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (4, 3, {'weight': 10, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}})]
+Grafo actual: [(1, 2, {'weight': 10, 'port': 3, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (1, 3, {'weight': 10, 'port': 4, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (2, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s2', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (2, 4, {'weight': 10, 'port': 2, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (3, 1, {'weight': 10, 'port': 1, 'link_id': 's1-s3', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (3, 4, {'weight': 10, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (4, 2, {'weight': 10, 'port': 1, 'link_id': 's2-s4', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}}), (4, 3, {'weight': 10, 'port': 2, 'link_id': 's3-s4', 'metrics': {'delay_ms': 5, 'bandwidth_mbps': 100, 'routing_cost': 10}})]
+HOST: 00:00:00:00:00:04 conectado a s4 puerto 4
+HOST: 00:00:00:00:00:02 conectado a s1 puerto 2
+HOST: 00:00:00:00:00:01 conectado a s1 puerto 1
+HOST: 00:00:00:00:00:03 conectado a s4 puerto 3
+NETWORK MONITOR: tick | datapaths=[1, 2, 3, 4]
+NETWORK MONITOR: solicitando PortStats a s1
+NETWORK MONITOR: solicitando PortStats a s2
+NETWORK MONITOR: solicitando PortStats a s3
+NETWORK MONITOR: solicitando PortStats a s4
+PORT STATS REPLY: s4 | entradas=5
+PORT MAP: s4 puerto=4 -> link=None
+PORT MAP: s4 puerto=1 -> link=(4, 2)
+PORT MAP: s4 puerto=2 -> link=(4, 3)
+PORT MAP: s4 puerto=3 -> link=None
+PORT STATS REPLY: s3 | entradas=3
+PORT MAP: s3 puerto=1 -> link=(3, 1)
+PORT MAP: s3 puerto=2 -> link=(3, 4)
+PORT STATS REPLY: s2 | entradas=3
+PORT MAP: s2 puerto=1 -> link=(2, 1)
+PORT MAP: s2 puerto=2 -> link=(2, 4)
+PORT STATS REPLY: s1 | entradas=5
+PORT MAP: s1 puerto=4 -> link=(1, 3)
+PORT MAP: s1 puerto=1 -> link=None
+PORT MAP: s1 puerto=2 -> link=None
+PORT MAP: s1 puerto=3 -> link=(1, 2)
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:01 -> 00:00:00:00:00:03 | ip=10.0.0.1 -> 10.0.0.3 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=20
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:03 -> 00:00:00:00:00:01 | ip=10.0.0.3 -> 10.0.0.1 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=20
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:02 -> 00:00:00:00:00:04 | ip=10.0.0.2 -> 10.0.0.4 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=20
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:04 -> 00:00:00:00:00:02 | ip=10.0.0.4 -> 10.0.0.2 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=20
+NETWORK MONITOR: tick | datapaths=[1, 2, 3, 4]
+NETWORK MONITOR: solicitando PortStats a s1
+NETWORK MONITOR: solicitando PortStats a s2
+NETWORK MONITOR: solicitando PortStats a s3
+NETWORK MONITOR: solicitando PortStats a s4
+PORT STATS REPLY: s1 | entradas=5
+PORT MAP: s1 puerto=4 -> link=(1, 3)
+LINK STATE: s1 -> s3 | tx=0.01 Mbps | rx=0.00 Mbps | util=0.0001 | residual=99.99 Mbps
+PORT MAP: s1 puerto=1 -> link=None
+PORT MAP: s1 puerto=2 -> link=None
+PORT MAP: s1 puerto=3 -> link=(1, 2)
+LINK STATE: s1 -> s2 | tx=0.01 Mbps | rx=0.01 Mbps | util=0.0001 | residual=99.99 Mbps
+PORT STATS REPLY: s4 | entradas=5
+PORT MAP: s4 puerto=4 -> link=None
+PORT MAP: s4 puerto=1 -> link=(4, 2)
+LINK STATE: s4 -> s2 | tx=0.01 Mbps | rx=0.01 Mbps | util=0.0001 | residual=99.99 Mbps
+PORT MAP: s4 puerto=2 -> link=(4, 3)
+LINK STATE: s4 -> s3 | tx=0.00 Mbps | rx=0.00 Mbps | util=0.0000 | residual=100.00 Mbps
+PORT MAP: s4 puerto=3 -> link=None
+PORT STATS REPLY: s3 | entradas=3
+PORT MAP: s3 puerto=1 -> link=(3, 1)
+LINK STATE: s3 -> s1 | tx=0.00 Mbps | rx=0.01 Mbps | util=0.0000 | residual=100.00 Mbps
+PORT MAP: s3 puerto=2 -> link=(3, 4)
+LINK STATE: s3 -> s4 | tx=0.00 Mbps | rx=0.00 Mbps | util=0.0000 | residual=100.00 Mbps
+PORT STATS REPLY: s2 | entradas=3
+PORT MAP: s2 puerto=1 -> link=(2, 1)
+LINK STATE: s2 -> s1 | tx=0.01 Mbps | rx=0.01 Mbps | util=0.0001 | residual=99.99 Mbps
+PORT MAP: s2 puerto=2 -> link=(2, 4)
+LINK STATE: s2 -> s4 | tx=0.01 Mbps | rx=0.01 Mbps | util=0.0001 | residual=99.99 Mbps
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:01 -> 00:00:00:00:00:04 | ip=10.0.0.1 -> 10.0.0.4 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=20
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:04 -> 00:00:00:00:00:01 | ip=10.0.0.4 -> 10.0.0.1 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=20
+NETWORK MONITOR: tick | datapaths=[1, 2, 3, 4]
+NETWORK MONITOR: solicitando PortStats a s1
+NETWORK MONITOR: solicitando PortStats a s2
+NETWORK MONITOR: solicitando PortStats a s3
+NETWORK MONITOR: solicitando PortStats a s4
+PORT STATS REPLY: s1 | entradas=5
+PORT MAP: s1 puerto=4 -> link=(1, 3)
+LINK STATE: s1 -> s3 | tx=0.00 Mbps | rx=0.00 Mbps | util=0.0000 | residual=100.00 Mbps
+PORT MAP: s1 puerto=1 -> link=None
+PORT MAP: s1 puerto=2 -> link=None
+PORT MAP: s1 puerto=3 -> link=(1, 2)
+LINK STATE: s1 -> s2 | tx=0.01 Mbps | rx=0.01 Mbps | util=0.0001 | residual=99.99 Mbps
+PORT STATS REPLY: s2 | entradas=3
+PORT MAP: s2 puerto=1 -> link=(2, 1)
+LINK STATE: s2 -> s1 | tx=0.01 Mbps | rx=0.01 Mbps | util=0.0001 | residual=99.99 Mbps
+PORT MAP: s2 puerto=2 -> link=(2, 4)
+LINK STATE: s2 -> s4 | tx=0.00 Mbps | rx=0.00 Mbps | util=0.0000 | residual=100.00 Mbps
+PORT STATS REPLY: s3 | entradas=3
+PORT MAP: s3 puerto=1 -> link=(3, 1)
+LINK STATE: s3 -> s1 | tx=0.00 Mbps | rx=0.00 Mbps | util=0.0000 | residual=100.00 Mbps
+PORT MAP: s3 puerto=2 -> link=(3, 4)
+LINK STATE: s3 -> s4 | tx=0.00 Mbps | rx=0.00 Mbps | util=0.0000 | residual=100.00 Mbps
+PORT STATS REPLY: s4 | entradas=5
+PORT MAP: s4 puerto=4 -> link=None
+PORT MAP: s4 puerto=1 -> link=(4, 2)
+LINK STATE: s4 -> s2 | tx=0.00 Mbps | rx=0.00 Mbps | util=0.0000 | residual=100.00 Mbps
+PORT MAP: s4 puerto=2 -> link=(4, 3)
+LINK STATE: s4 -> s3 | tx=0.00 Mbps | rx=0.00 Mbps | util=0.0000 | residual=100.00 Mbps
+PORT MAP: s4 puerto=3 -> link=None
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:02 -> 00:00:00:00:00:03 | ip=10.0.0.2 -> 10.0.0.3 | eth_type=2048 | proto=1 | sport=None | dport=None | s1 -> s4 | path=[1, 2, 4] | cost=20
+DIJKSTRA: NUEVA DECISION | mac=00:00:00:00:00:03 -> 00:00:00:00:00:02 | ip=10.0.0.3 -> 10.0.0.2 | eth_type=2048 | proto=1 | sport=None | dport=None | s4 -> s1 | path=[4, 2, 1] | cost=20
+NETWORK MONITOR: tick | datapaths=[1, 2, 3, 4]
+NETWORK MONITOR: solicitando PortStats a s1
+NETWORK MONITOR: solicitando PortStats a s2
+NETWORK MONITOR: solicitando PortStats a s3
+NETWORK MONITOR: solicitando PortStats a s4
+PORT STATS REPLY: s1 | entradas=5
+PORT MAP: s1 puerto=4 -> link=(1, 3)
+LINK STATE: s1 -> s3 | tx=0.00 Mbps | rx=0.00 Mbps | util=0.0000 | residual=100.00 Mbps
+PORT MAP: s1 puerto=1 -> link=None
+PORT MAP: s1 puerto=2 -> link=None
+PORT MAP: s1 puerto=3 -> link=(1, 2)
+LINK STATE: s1 -> s2 | tx=0.01 Mbps | rx=0.01 Mbps | util=0.0001 | residual=99.99 Mbps
+PORT STATS REPLY: s2 | entradas=3
+PORT MAP: s2 puerto=1 -> link=(2, 1)
+LINK STATE: s2 -> s1 | tx=0.01 Mbps | rx=0.01 Mbps | util=0.0001 | residual=99.99 Mbps
+PORT MAP: s2 puerto=2 -> link=(2, 4)
+LINK STATE: s2 -> s4 | tx=0.01 Mbps | rx=0.01 Mbps | util=0.0001 | residual=99.99 Mbps
+PORT STATS REPLY: s3 | entradas=3
+PORT MAP: s3 puerto=1 -> link=(3, 1)
+LINK STATE: s3 -> s1 | tx=0.00 Mbps | rx=0.00 Mbps | util=0.0000 | residual=100.00 Mbps
+PORT MAP: s3 puerto=2 -> link=(3, 4)
+LINK STATE: s3 -> s4 | tx=0.00 Mbps | rx=0.00 Mbps | util=0.0000 | residual=100.00 Mbps
+PORT STATS REPLY: s4 | entradas=5
+PORT MAP: s4 puerto=4 -> link=None
+PORT MAP: s4 puerto=1 -> link=(4, 2)
+LINK STATE: s4 -> s2 | tx=0.01 Mbps | rx=0.01 Mbps | util=0.0001 | residual=99.99 Mbps
+PORT MAP: s4 puerto=2 -> link=(4, 3)
+LINK STATE: s4 -> s3 | tx=0.00 Mbps | rx=0.00 Mbps | util=0.0000 | residual=100.00 Mbps
+PORT MAP: s4 puerto=3 -> link=None
+NETWORK MONITOR: tick | datapaths=[1, 2, 3, 4]
+NETWORK MONITOR: solicitando PortStats a s1
+NETWORK MONITOR: solicitando PortStats a s2
+NETWORK MONITOR: solicitando PortStats a s3
+NETWORK MONITOR: solicitando PortStats a s4

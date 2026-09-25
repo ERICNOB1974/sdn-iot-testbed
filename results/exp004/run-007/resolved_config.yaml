@@ -1,0 +1,1770 @@
+experiment:
+  id: exp004
+  name: dijkstra-diamond-200-hosts
+environment:
+  controller: ryu-4.34-py38
+  mininet: mininet-2.3.0
+  openflow: '1.3'
+controller:
+  app: controller.routing_controller
+  ip: 127.0.0.1
+  port: 6633
+routing:
+  name: dijkstra
+  module: controller.routing.dijkstra
+  class: DijkstraRouting
+  metric: routing_cost
+topology:
+  definition: topologies/definitions/diamond_200_hosts.yaml
+  name: diamond-200-hosts
+  hosts:
+  - name: h1
+    ip: 10.0.0.1
+    mac: 00:00:00:00:00:01
+  - name: h2
+    ip: 10.0.0.2
+    mac: 00:00:00:00:00:02
+  - name: h3
+    ip: 10.0.0.3
+    mac: 00:00:00:00:00:03
+  - name: h4
+    ip: 10.0.0.4
+    mac: 00:00:00:00:00:04
+  - name: h5
+    ip: 10.0.0.5
+    mac: 00:00:00:00:00:05
+  - name: h6
+    ip: 10.0.0.6
+    mac: 00:00:00:00:00:06
+  - name: h7
+    ip: 10.0.0.7
+    mac: 00:00:00:00:00:07
+  - name: h8
+    ip: 10.0.0.8
+    mac: 00:00:00:00:00:08
+  - name: h9
+    ip: 10.0.0.9
+    mac: 00:00:00:00:00:09
+  - name: h10
+    ip: 10.0.0.10
+    mac: 00:00:00:00:00:0a
+  - name: h11
+    ip: 10.0.0.11
+    mac: 00:00:00:00:00:0b
+  - name: h12
+    ip: 10.0.0.12
+    mac: 00:00:00:00:00:0c
+  - name: h13
+    ip: 10.0.0.13
+    mac: 00:00:00:00:00:0d
+  - name: h14
+    ip: 10.0.0.14
+    mac: 00:00:00:00:00:0e
+  - name: h15
+    ip: 10.0.0.15
+    mac: 00:00:00:00:00:0f
+  - name: h16
+    ip: 10.0.0.16
+    mac: 00:00:00:00:00:10
+  - name: h17
+    ip: 10.0.0.17
+    mac: 00:00:00:00:00:11
+  - name: h18
+    ip: 10.0.0.18
+    mac: 00:00:00:00:00:12
+  - name: h19
+    ip: 10.0.0.19
+    mac: 00:00:00:00:00:13
+  - name: h20
+    ip: 10.0.0.20
+    mac: 00:00:00:00:00:14
+  - name: h21
+    ip: 10.0.0.21
+    mac: 00:00:00:00:00:15
+  - name: h22
+    ip: 10.0.0.22
+    mac: 00:00:00:00:00:16
+  - name: h23
+    ip: 10.0.0.23
+    mac: 00:00:00:00:00:17
+  - name: h24
+    ip: 10.0.0.24
+    mac: 00:00:00:00:00:18
+  - name: h25
+    ip: 10.0.0.25
+    mac: 00:00:00:00:00:19
+  - name: h26
+    ip: 10.0.0.26
+    mac: 00:00:00:00:00:1a
+  - name: h27
+    ip: 10.0.0.27
+    mac: 00:00:00:00:00:1b
+  - name: h28
+    ip: 10.0.0.28
+    mac: 00:00:00:00:00:1c
+  - name: h29
+    ip: 10.0.0.29
+    mac: 00:00:00:00:00:1d
+  - name: h30
+    ip: 10.0.0.30
+    mac: 00:00:00:00:00:1e
+  - name: h31
+    ip: 10.0.0.31
+    mac: 00:00:00:00:00:1f
+  - name: h32
+    ip: 10.0.0.32
+    mac: 00:00:00:00:00:20
+  - name: h33
+    ip: 10.0.0.33
+    mac: 00:00:00:00:00:21
+  - name: h34
+    ip: 10.0.0.34
+    mac: 00:00:00:00:00:22
+  - name: h35
+    ip: 10.0.0.35
+    mac: 00:00:00:00:00:23
+  - name: h36
+    ip: 10.0.0.36
+    mac: 00:00:00:00:00:24
+  - name: h37
+    ip: 10.0.0.37
+    mac: 00:00:00:00:00:25
+  - name: h38
+    ip: 10.0.0.38
+    mac: 00:00:00:00:00:26
+  - name: h39
+    ip: 10.0.0.39
+    mac: 00:00:00:00:00:27
+  - name: h40
+    ip: 10.0.0.40
+    mac: 00:00:00:00:00:28
+  - name: h41
+    ip: 10.0.0.41
+    mac: 00:00:00:00:00:29
+  - name: h42
+    ip: 10.0.0.42
+    mac: 00:00:00:00:00:2a
+  - name: h43
+    ip: 10.0.0.43
+    mac: 00:00:00:00:00:2b
+  - name: h44
+    ip: 10.0.0.44
+    mac: 00:00:00:00:00:2c
+  - name: h45
+    ip: 10.0.0.45
+    mac: 00:00:00:00:00:2d
+  - name: h46
+    ip: 10.0.0.46
+    mac: 00:00:00:00:00:2e
+  - name: h47
+    ip: 10.0.0.47
+    mac: 00:00:00:00:00:2f
+  - name: h48
+    ip: 10.0.0.48
+    mac: 00:00:00:00:00:30
+  - name: h49
+    ip: 10.0.0.49
+    mac: 00:00:00:00:00:31
+  - name: h50
+    ip: 10.0.0.50
+    mac: 00:00:00:00:00:32
+  - name: h51
+    ip: 10.0.0.51
+    mac: 00:00:00:00:00:33
+  - name: h52
+    ip: 10.0.0.52
+    mac: 00:00:00:00:00:34
+  - name: h53
+    ip: 10.0.0.53
+    mac: 00:00:00:00:00:35
+  - name: h54
+    ip: 10.0.0.54
+    mac: 00:00:00:00:00:36
+  - name: h55
+    ip: 10.0.0.55
+    mac: 00:00:00:00:00:37
+  - name: h56
+    ip: 10.0.0.56
+    mac: 00:00:00:00:00:38
+  - name: h57
+    ip: 10.0.0.57
+    mac: 00:00:00:00:00:39
+  - name: h58
+    ip: 10.0.0.58
+    mac: 00:00:00:00:00:3a
+  - name: h59
+    ip: 10.0.0.59
+    mac: 00:00:00:00:00:3b
+  - name: h60
+    ip: 10.0.0.60
+    mac: 00:00:00:00:00:3c
+  - name: h61
+    ip: 10.0.0.61
+    mac: 00:00:00:00:00:3d
+  - name: h62
+    ip: 10.0.0.62
+    mac: 00:00:00:00:00:3e
+  - name: h63
+    ip: 10.0.0.63
+    mac: 00:00:00:00:00:3f
+  - name: h64
+    ip: 10.0.0.64
+    mac: 00:00:00:00:00:40
+  - name: h65
+    ip: 10.0.0.65
+    mac: 00:00:00:00:00:41
+  - name: h66
+    ip: 10.0.0.66
+    mac: 00:00:00:00:00:42
+  - name: h67
+    ip: 10.0.0.67
+    mac: 00:00:00:00:00:43
+  - name: h68
+    ip: 10.0.0.68
+    mac: 00:00:00:00:00:44
+  - name: h69
+    ip: 10.0.0.69
+    mac: 00:00:00:00:00:45
+  - name: h70
+    ip: 10.0.0.70
+    mac: 00:00:00:00:00:46
+  - name: h71
+    ip: 10.0.0.71
+    mac: 00:00:00:00:00:47
+  - name: h72
+    ip: 10.0.0.72
+    mac: 00:00:00:00:00:48
+  - name: h73
+    ip: 10.0.0.73
+    mac: 00:00:00:00:00:49
+  - name: h74
+    ip: 10.0.0.74
+    mac: 00:00:00:00:00:4a
+  - name: h75
+    ip: 10.0.0.75
+    mac: 00:00:00:00:00:4b
+  - name: h76
+    ip: 10.0.0.76
+    mac: 00:00:00:00:00:4c
+  - name: h77
+    ip: 10.0.0.77
+    mac: 00:00:00:00:00:4d
+  - name: h78
+    ip: 10.0.0.78
+    mac: 00:00:00:00:00:4e
+  - name: h79
+    ip: 10.0.0.79
+    mac: 00:00:00:00:00:4f
+  - name: h80
+    ip: 10.0.0.80
+    mac: 00:00:00:00:00:50
+  - name: h81
+    ip: 10.0.0.81
+    mac: 00:00:00:00:00:51
+  - name: h82
+    ip: 10.0.0.82
+    mac: 00:00:00:00:00:52
+  - name: h83
+    ip: 10.0.0.83
+    mac: 00:00:00:00:00:53
+  - name: h84
+    ip: 10.0.0.84
+    mac: 00:00:00:00:00:54
+  - name: h85
+    ip: 10.0.0.85
+    mac: 00:00:00:00:00:55
+  - name: h86
+    ip: 10.0.0.86
+    mac: 00:00:00:00:00:56
+  - name: h87
+    ip: 10.0.0.87
+    mac: 00:00:00:00:00:57
+  - name: h88
+    ip: 10.0.0.88
+    mac: 00:00:00:00:00:58
+  - name: h89
+    ip: 10.0.0.89
+    mac: 00:00:00:00:00:59
+  - name: h90
+    ip: 10.0.0.90
+    mac: 00:00:00:00:00:5a
+  - name: h91
+    ip: 10.0.0.91
+    mac: 00:00:00:00:00:5b
+  - name: h92
+    ip: 10.0.0.92
+    mac: 00:00:00:00:00:5c
+  - name: h93
+    ip: 10.0.0.93
+    mac: 00:00:00:00:00:5d
+  - name: h94
+    ip: 10.0.0.94
+    mac: 00:00:00:00:00:5e
+  - name: h95
+    ip: 10.0.0.95
+    mac: 00:00:00:00:00:5f
+  - name: h96
+    ip: 10.0.0.96
+    mac: 00:00:00:00:00:60
+  - name: h97
+    ip: 10.0.0.97
+    mac: 00:00:00:00:00:61
+  - name: h98
+    ip: 10.0.0.98
+    mac: 00:00:00:00:00:62
+  - name: h99
+    ip: 10.0.0.99
+    mac: 00:00:00:00:00:63
+  - name: h100
+    ip: 10.0.0.100
+    mac: 00:00:00:00:00:64
+  - name: h101
+    ip: 10.0.0.101
+    mac: 00:00:00:00:00:65
+  - name: h102
+    ip: 10.0.0.102
+    mac: 00:00:00:00:00:66
+  - name: h103
+    ip: 10.0.0.103
+    mac: 00:00:00:00:00:67
+  - name: h104
+    ip: 10.0.0.104
+    mac: 00:00:00:00:00:68
+  - name: h105
+    ip: 10.0.0.105
+    mac: 00:00:00:00:00:69
+  - name: h106
+    ip: 10.0.0.106
+    mac: 00:00:00:00:00:6a
+  - name: h107
+    ip: 10.0.0.107
+    mac: 00:00:00:00:00:6b
+  - name: h108
+    ip: 10.0.0.108
+    mac: 00:00:00:00:00:6c
+  - name: h109
+    ip: 10.0.0.109
+    mac: 00:00:00:00:00:6d
+  - name: h110
+    ip: 10.0.0.110
+    mac: 00:00:00:00:00:6e
+  - name: h111
+    ip: 10.0.0.111
+    mac: 00:00:00:00:00:6f
+  - name: h112
+    ip: 10.0.0.112
+    mac: 00:00:00:00:00:70
+  - name: h113
+    ip: 10.0.0.113
+    mac: 00:00:00:00:00:71
+  - name: h114
+    ip: 10.0.0.114
+    mac: 00:00:00:00:00:72
+  - name: h115
+    ip: 10.0.0.115
+    mac: 00:00:00:00:00:73
+  - name: h116
+    ip: 10.0.0.116
+    mac: 00:00:00:00:00:74
+  - name: h117
+    ip: 10.0.0.117
+    mac: 00:00:00:00:00:75
+  - name: h118
+    ip: 10.0.0.118
+    mac: 00:00:00:00:00:76
+  - name: h119
+    ip: 10.0.0.119
+    mac: 00:00:00:00:00:77
+  - name: h120
+    ip: 10.0.0.120
+    mac: 00:00:00:00:00:78
+  - name: h121
+    ip: 10.0.0.121
+    mac: 00:00:00:00:00:79
+  - name: h122
+    ip: 10.0.0.122
+    mac: 00:00:00:00:00:7a
+  - name: h123
+    ip: 10.0.0.123
+    mac: 00:00:00:00:00:7b
+  - name: h124
+    ip: 10.0.0.124
+    mac: 00:00:00:00:00:7c
+  - name: h125
+    ip: 10.0.0.125
+    mac: 00:00:00:00:00:7d
+  - name: h126
+    ip: 10.0.0.126
+    mac: 00:00:00:00:00:7e
+  - name: h127
+    ip: 10.0.0.127
+    mac: 00:00:00:00:00:7f
+  - name: h128
+    ip: 10.0.0.128
+    mac: 00:00:00:00:00:80
+  - name: h129
+    ip: 10.0.0.129
+    mac: 00:00:00:00:00:81
+  - name: h130
+    ip: 10.0.0.130
+    mac: 00:00:00:00:00:82
+  - name: h131
+    ip: 10.0.0.131
+    mac: 00:00:00:00:00:83
+  - name: h132
+    ip: 10.0.0.132
+    mac: 00:00:00:00:00:84
+  - name: h133
+    ip: 10.0.0.133
+    mac: 00:00:00:00:00:85
+  - name: h134
+    ip: 10.0.0.134
+    mac: 00:00:00:00:00:86
+  - name: h135
+    ip: 10.0.0.135
+    mac: 00:00:00:00:00:87
+  - name: h136
+    ip: 10.0.0.136
+    mac: 00:00:00:00:00:88
+  - name: h137
+    ip: 10.0.0.137
+    mac: 00:00:00:00:00:89
+  - name: h138
+    ip: 10.0.0.138
+    mac: 00:00:00:00:00:8a
+  - name: h139
+    ip: 10.0.0.139
+    mac: 00:00:00:00:00:8b
+  - name: h140
+    ip: 10.0.0.140
+    mac: 00:00:00:00:00:8c
+  - name: h141
+    ip: 10.0.0.141
+    mac: 00:00:00:00:00:8d
+  - name: h142
+    ip: 10.0.0.142
+    mac: 00:00:00:00:00:8e
+  - name: h143
+    ip: 10.0.0.143
+    mac: 00:00:00:00:00:8f
+  - name: h144
+    ip: 10.0.0.144
+    mac: 00:00:00:00:00:90
+  - name: h145
+    ip: 10.0.0.145
+    mac: 00:00:00:00:00:91
+  - name: h146
+    ip: 10.0.0.146
+    mac: 00:00:00:00:00:92
+  - name: h147
+    ip: 10.0.0.147
+    mac: 00:00:00:00:00:93
+  - name: h148
+    ip: 10.0.0.148
+    mac: 00:00:00:00:00:94
+  - name: h149
+    ip: 10.0.0.149
+    mac: 00:00:00:00:00:95
+  - name: h150
+    ip: 10.0.0.150
+    mac: 00:00:00:00:00:96
+  - name: h151
+    ip: 10.0.0.151
+    mac: 00:00:00:00:00:97
+  - name: h152
+    ip: 10.0.0.152
+    mac: 00:00:00:00:00:98
+  - name: h153
+    ip: 10.0.0.153
+    mac: 00:00:00:00:00:99
+  - name: h154
+    ip: 10.0.0.154
+    mac: 00:00:00:00:00:9a
+  - name: h155
+    ip: 10.0.0.155
+    mac: 00:00:00:00:00:9b
+  - name: h156
+    ip: 10.0.0.156
+    mac: 00:00:00:00:00:9c
+  - name: h157
+    ip: 10.0.0.157
+    mac: 00:00:00:00:00:9d
+  - name: h158
+    ip: 10.0.0.158
+    mac: 00:00:00:00:00:9e
+  - name: h159
+    ip: 10.0.0.159
+    mac: 00:00:00:00:00:9f
+  - name: h160
+    ip: 10.0.0.160
+    mac: 00:00:00:00:00:a0
+  - name: h161
+    ip: 10.0.0.161
+    mac: 00:00:00:00:00:a1
+  - name: h162
+    ip: 10.0.0.162
+    mac: 00:00:00:00:00:a2
+  - name: h163
+    ip: 10.0.0.163
+    mac: 00:00:00:00:00:a3
+  - name: h164
+    ip: 10.0.0.164
+    mac: 00:00:00:00:00:a4
+  - name: h165
+    ip: 10.0.0.165
+    mac: 00:00:00:00:00:a5
+  - name: h166
+    ip: 10.0.0.166
+    mac: 00:00:00:00:00:a6
+  - name: h167
+    ip: 10.0.0.167
+    mac: 00:00:00:00:00:a7
+  - name: h168
+    ip: 10.0.0.168
+    mac: 00:00:00:00:00:a8
+  - name: h169
+    ip: 10.0.0.169
+    mac: 00:00:00:00:00:a9
+  - name: h170
+    ip: 10.0.0.170
+    mac: 00:00:00:00:00:aa
+  - name: h171
+    ip: 10.0.0.171
+    mac: 00:00:00:00:00:ab
+  - name: h172
+    ip: 10.0.0.172
+    mac: 00:00:00:00:00:ac
+  - name: h173
+    ip: 10.0.0.173
+    mac: 00:00:00:00:00:ad
+  - name: h174
+    ip: 10.0.0.174
+    mac: 00:00:00:00:00:ae
+  - name: h175
+    ip: 10.0.0.175
+    mac: 00:00:00:00:00:af
+  - name: h176
+    ip: 10.0.0.176
+    mac: 00:00:00:00:00:b0
+  - name: h177
+    ip: 10.0.0.177
+    mac: 00:00:00:00:00:b1
+  - name: h178
+    ip: 10.0.0.178
+    mac: 00:00:00:00:00:b2
+  - name: h179
+    ip: 10.0.0.179
+    mac: 00:00:00:00:00:b3
+  - name: h180
+    ip: 10.0.0.180
+    mac: 00:00:00:00:00:b4
+  - name: h181
+    ip: 10.0.0.181
+    mac: 00:00:00:00:00:b5
+  - name: h182
+    ip: 10.0.0.182
+    mac: 00:00:00:00:00:b6
+  - name: h183
+    ip: 10.0.0.183
+    mac: 00:00:00:00:00:b7
+  - name: h184
+    ip: 10.0.0.184
+    mac: 00:00:00:00:00:b8
+  - name: h185
+    ip: 10.0.0.185
+    mac: 00:00:00:00:00:b9
+  - name: h186
+    ip: 10.0.0.186
+    mac: 00:00:00:00:00:ba
+  - name: h187
+    ip: 10.0.0.187
+    mac: 00:00:00:00:00:bb
+  - name: h188
+    ip: 10.0.0.188
+    mac: 00:00:00:00:00:bc
+  - name: h189
+    ip: 10.0.0.189
+    mac: 00:00:00:00:00:bd
+  - name: h190
+    ip: 10.0.0.190
+    mac: 00:00:00:00:00:be
+  - name: h191
+    ip: 10.0.0.191
+    mac: 00:00:00:00:00:bf
+  - name: h192
+    ip: 10.0.0.192
+    mac: 00:00:00:00:00:c0
+  - name: h193
+    ip: 10.0.0.193
+    mac: 00:00:00:00:00:c1
+  - name: h194
+    ip: 10.0.0.194
+    mac: 00:00:00:00:00:c2
+  - name: h195
+    ip: 10.0.0.195
+    mac: 00:00:00:00:00:c3
+  - name: h196
+    ip: 10.0.0.196
+    mac: 00:00:00:00:00:c4
+  - name: h197
+    ip: 10.0.0.197
+    mac: 00:00:00:00:00:c5
+  - name: h198
+    ip: 10.0.0.198
+    mac: 00:00:00:00:00:c6
+  - name: h199
+    ip: 10.0.0.199
+    mac: 00:00:00:00:00:c7
+  - name: h200
+    ip: 10.0.0.200
+    mac: 00:00:00:00:00:c8
+  switches:
+  - name: s1
+    dpid: '0000000000000001'
+  - name: s2
+    dpid: '0000000000000002'
+  - name: s3
+    dpid: '0000000000000003'
+  - name: s4
+    dpid: '0000000000000004'
+  links:
+  - id: h1-s1
+    source: h1
+    destination: s1
+  - id: h2-s1
+    source: h2
+    destination: s1
+  - id: h3-s1
+    source: h3
+    destination: s1
+  - id: h4-s1
+    source: h4
+    destination: s1
+  - id: h5-s1
+    source: h5
+    destination: s1
+  - id: h6-s1
+    source: h6
+    destination: s1
+  - id: h7-s1
+    source: h7
+    destination: s1
+  - id: h8-s1
+    source: h8
+    destination: s1
+  - id: h9-s1
+    source: h9
+    destination: s1
+  - id: h10-s1
+    source: h10
+    destination: s1
+  - id: h11-s1
+    source: h11
+    destination: s1
+  - id: h12-s1
+    source: h12
+    destination: s1
+  - id: h13-s1
+    source: h13
+    destination: s1
+  - id: h14-s1
+    source: h14
+    destination: s1
+  - id: h15-s1
+    source: h15
+    destination: s1
+  - id: h16-s1
+    source: h16
+    destination: s1
+  - id: h17-s1
+    source: h17
+    destination: s1
+  - id: h18-s1
+    source: h18
+    destination: s1
+  - id: h19-s1
+    source: h19
+    destination: s1
+  - id: h20-s1
+    source: h20
+    destination: s1
+  - id: h21-s1
+    source: h21
+    destination: s1
+  - id: h22-s1
+    source: h22
+    destination: s1
+  - id: h23-s1
+    source: h23
+    destination: s1
+  - id: h24-s1
+    source: h24
+    destination: s1
+  - id: h25-s1
+    source: h25
+    destination: s1
+  - id: h26-s1
+    source: h26
+    destination: s1
+  - id: h27-s1
+    source: h27
+    destination: s1
+  - id: h28-s1
+    source: h28
+    destination: s1
+  - id: h29-s1
+    source: h29
+    destination: s1
+  - id: h30-s1
+    source: h30
+    destination: s1
+  - id: h31-s1
+    source: h31
+    destination: s1
+  - id: h32-s1
+    source: h32
+    destination: s1
+  - id: h33-s1
+    source: h33
+    destination: s1
+  - id: h34-s1
+    source: h34
+    destination: s1
+  - id: h35-s1
+    source: h35
+    destination: s1
+  - id: h36-s1
+    source: h36
+    destination: s1
+  - id: h37-s1
+    source: h37
+    destination: s1
+  - id: h38-s1
+    source: h38
+    destination: s1
+  - id: h39-s1
+    source: h39
+    destination: s1
+  - id: h40-s1
+    source: h40
+    destination: s1
+  - id: h41-s1
+    source: h41
+    destination: s1
+  - id: h42-s1
+    source: h42
+    destination: s1
+  - id: h43-s1
+    source: h43
+    destination: s1
+  - id: h44-s1
+    source: h44
+    destination: s1
+  - id: h45-s1
+    source: h45
+    destination: s1
+  - id: h46-s1
+    source: h46
+    destination: s1
+  - id: h47-s1
+    source: h47
+    destination: s1
+  - id: h48-s1
+    source: h48
+    destination: s1
+  - id: h49-s1
+    source: h49
+    destination: s1
+  - id: h50-s1
+    source: h50
+    destination: s1
+  - id: h51-s1
+    source: h51
+    destination: s1
+  - id: h52-s1
+    source: h52
+    destination: s1
+  - id: h53-s1
+    source: h53
+    destination: s1
+  - id: h54-s1
+    source: h54
+    destination: s1
+  - id: h55-s1
+    source: h55
+    destination: s1
+  - id: h56-s1
+    source: h56
+    destination: s1
+  - id: h57-s1
+    source: h57
+    destination: s1
+  - id: h58-s1
+    source: h58
+    destination: s1
+  - id: h59-s1
+    source: h59
+    destination: s1
+  - id: h60-s1
+    source: h60
+    destination: s1
+  - id: h61-s1
+    source: h61
+    destination: s1
+  - id: h62-s1
+    source: h62
+    destination: s1
+  - id: h63-s1
+    source: h63
+    destination: s1
+  - id: h64-s1
+    source: h64
+    destination: s1
+  - id: h65-s1
+    source: h65
+    destination: s1
+  - id: h66-s1
+    source: h66
+    destination: s1
+  - id: h67-s1
+    source: h67
+    destination: s1
+  - id: h68-s1
+    source: h68
+    destination: s1
+  - id: h69-s1
+    source: h69
+    destination: s1
+  - id: h70-s1
+    source: h70
+    destination: s1
+  - id: h71-s1
+    source: h71
+    destination: s1
+  - id: h72-s1
+    source: h72
+    destination: s1
+  - id: h73-s1
+    source: h73
+    destination: s1
+  - id: h74-s1
+    source: h74
+    destination: s1
+  - id: h75-s1
+    source: h75
+    destination: s1
+  - id: h76-s1
+    source: h76
+    destination: s1
+  - id: h77-s1
+    source: h77
+    destination: s1
+  - id: h78-s1
+    source: h78
+    destination: s1
+  - id: h79-s1
+    source: h79
+    destination: s1
+  - id: h80-s1
+    source: h80
+    destination: s1
+  - id: h81-s1
+    source: h81
+    destination: s1
+  - id: h82-s1
+    source: h82
+    destination: s1
+  - id: h83-s1
+    source: h83
+    destination: s1
+  - id: h84-s1
+    source: h84
+    destination: s1
+  - id: h85-s1
+    source: h85
+    destination: s1
+  - id: h86-s1
+    source: h86
+    destination: s1
+  - id: h87-s1
+    source: h87
+    destination: s1
+  - id: h88-s1
+    source: h88
+    destination: s1
+  - id: h89-s1
+    source: h89
+    destination: s1
+  - id: h90-s1
+    source: h90
+    destination: s1
+  - id: h91-s1
+    source: h91
+    destination: s1
+  - id: h92-s1
+    source: h92
+    destination: s1
+  - id: h93-s1
+    source: h93
+    destination: s1
+  - id: h94-s1
+    source: h94
+    destination: s1
+  - id: h95-s1
+    source: h95
+    destination: s1
+  - id: h96-s1
+    source: h96
+    destination: s1
+  - id: h97-s1
+    source: h97
+    destination: s1
+  - id: h98-s1
+    source: h98
+    destination: s1
+  - id: h99-s1
+    source: h99
+    destination: s1
+  - id: h100-s1
+    source: h100
+    destination: s1
+  - id: s1-s2
+    source: s1
+    destination: s2
+  - id: s2-s4
+    source: s2
+    destination: s4
+  - id: s1-s3
+    source: s1
+    destination: s3
+  - id: s3-s4
+    source: s3
+    destination: s4
+  - id: s4-h101
+    source: s4
+    destination: h101
+  - id: s4-h102
+    source: s4
+    destination: h102
+  - id: s4-h103
+    source: s4
+    destination: h103
+  - id: s4-h104
+    source: s4
+    destination: h104
+  - id: s4-h105
+    source: s4
+    destination: h105
+  - id: s4-h106
+    source: s4
+    destination: h106
+  - id: s4-h107
+    source: s4
+    destination: h107
+  - id: s4-h108
+    source: s4
+    destination: h108
+  - id: s4-h109
+    source: s4
+    destination: h109
+  - id: s4-h110
+    source: s4
+    destination: h110
+  - id: s4-h111
+    source: s4
+    destination: h111
+  - id: s4-h112
+    source: s4
+    destination: h112
+  - id: s4-h113
+    source: s4
+    destination: h113
+  - id: s4-h114
+    source: s4
+    destination: h114
+  - id: s4-h115
+    source: s4
+    destination: h115
+  - id: s4-h116
+    source: s4
+    destination: h116
+  - id: s4-h117
+    source: s4
+    destination: h117
+  - id: s4-h118
+    source: s4
+    destination: h118
+  - id: s4-h119
+    source: s4
+    destination: h119
+  - id: s4-h120
+    source: s4
+    destination: h120
+  - id: s4-h121
+    source: s4
+    destination: h121
+  - id: s4-h122
+    source: s4
+    destination: h122
+  - id: s4-h123
+    source: s4
+    destination: h123
+  - id: s4-h124
+    source: s4
+    destination: h124
+  - id: s4-h125
+    source: s4
+    destination: h125
+  - id: s4-h126
+    source: s4
+    destination: h126
+  - id: s4-h127
+    source: s4
+    destination: h127
+  - id: s4-h128
+    source: s4
+    destination: h128
+  - id: s4-h129
+    source: s4
+    destination: h129
+  - id: s4-h130
+    source: s4
+    destination: h130
+  - id: s4-h131
+    source: s4
+    destination: h131
+  - id: s4-h132
+    source: s4
+    destination: h132
+  - id: s4-h133
+    source: s4
+    destination: h133
+  - id: s4-h134
+    source: s4
+    destination: h134
+  - id: s4-h135
+    source: s4
+    destination: h135
+  - id: s4-h136
+    source: s4
+    destination: h136
+  - id: s4-h137
+    source: s4
+    destination: h137
+  - id: s4-h138
+    source: s4
+    destination: h138
+  - id: s4-h139
+    source: s4
+    destination: h139
+  - id: s4-h140
+    source: s4
+    destination: h140
+  - id: s4-h141
+    source: s4
+    destination: h141
+  - id: s4-h142
+    source: s4
+    destination: h142
+  - id: s4-h143
+    source: s4
+    destination: h143
+  - id: s4-h144
+    source: s4
+    destination: h144
+  - id: s4-h145
+    source: s4
+    destination: h145
+  - id: s4-h146
+    source: s4
+    destination: h146
+  - id: s4-h147
+    source: s4
+    destination: h147
+  - id: s4-h148
+    source: s4
+    destination: h148
+  - id: s4-h149
+    source: s4
+    destination: h149
+  - id: s4-h150
+    source: s4
+    destination: h150
+  - id: s4-h151
+    source: s4
+    destination: h151
+  - id: s4-h152
+    source: s4
+    destination: h152
+  - id: s4-h153
+    source: s4
+    destination: h153
+  - id: s4-h154
+    source: s4
+    destination: h154
+  - id: s4-h155
+    source: s4
+    destination: h155
+  - id: s4-h156
+    source: s4
+    destination: h156
+  - id: s4-h157
+    source: s4
+    destination: h157
+  - id: s4-h158
+    source: s4
+    destination: h158
+  - id: s4-h159
+    source: s4
+    destination: h159
+  - id: s4-h160
+    source: s4
+    destination: h160
+  - id: s4-h161
+    source: s4
+    destination: h161
+  - id: s4-h162
+    source: s4
+    destination: h162
+  - id: s4-h163
+    source: s4
+    destination: h163
+  - id: s4-h164
+    source: s4
+    destination: h164
+  - id: s4-h165
+    source: s4
+    destination: h165
+  - id: s4-h166
+    source: s4
+    destination: h166
+  - id: s4-h167
+    source: s4
+    destination: h167
+  - id: s4-h168
+    source: s4
+    destination: h168
+  - id: s4-h169
+    source: s4
+    destination: h169
+  - id: s4-h170
+    source: s4
+    destination: h170
+  - id: s4-h171
+    source: s4
+    destination: h171
+  - id: s4-h172
+    source: s4
+    destination: h172
+  - id: s4-h173
+    source: s4
+    destination: h173
+  - id: s4-h174
+    source: s4
+    destination: h174
+  - id: s4-h175
+    source: s4
+    destination: h175
+  - id: s4-h176
+    source: s4
+    destination: h176
+  - id: s4-h177
+    source: s4
+    destination: h177
+  - id: s4-h178
+    source: s4
+    destination: h178
+  - id: s4-h179
+    source: s4
+    destination: h179
+  - id: s4-h180
+    source: s4
+    destination: h180
+  - id: s4-h181
+    source: s4
+    destination: h181
+  - id: s4-h182
+    source: s4
+    destination: h182
+  - id: s4-h183
+    source: s4
+    destination: h183
+  - id: s4-h184
+    source: s4
+    destination: h184
+  - id: s4-h185
+    source: s4
+    destination: h185
+  - id: s4-h186
+    source: s4
+    destination: h186
+  - id: s4-h187
+    source: s4
+    destination: h187
+  - id: s4-h188
+    source: s4
+    destination: h188
+  - id: s4-h189
+    source: s4
+    destination: h189
+  - id: s4-h190
+    source: s4
+    destination: h190
+  - id: s4-h191
+    source: s4
+    destination: h191
+  - id: s4-h192
+    source: s4
+    destination: h192
+  - id: s4-h193
+    source: s4
+    destination: h193
+  - id: s4-h194
+    source: s4
+    destination: h194
+  - id: s4-h195
+    source: s4
+    destination: h195
+  - id: s4-h196
+    source: s4
+    destination: h196
+  - id: s4-h197
+    source: s4
+    destination: h197
+  - id: s4-h198
+    source: s4
+    destination: h198
+  - id: s4-h199
+    source: s4
+    destination: h199
+  - id: s4-h200
+    source: s4
+    destination: h200
+network:
+  profile: network/profiles/diamond_low_delay.yaml
+  name: diamond-low-delay
+  links:
+    s1-s2:
+      delay_ms: 5
+      routing_cost: 5
+    s2-s4:
+      delay_ms: 5
+      routing_cost: 5
+    s1-s3:
+      delay_ms: 20
+      routing_cost: 20
+    s3-s4:
+      delay_ms: 20
+      routing_cost: 20
+traffic:
+  profile: traffic/profiles/ping_200_hosts.yaml
+  generator:
+    module: traffic.generators.ping
+    function: run_ping
+  config:
+    type: ping
+    flows:
+    - id: flow-001
+      source: h1
+      destination: h101
+      count: 5
+      interval: 0.2
+    - id: flow-002
+      source: h2
+      destination: h102
+      count: 5
+      interval: 0.2
+    - id: flow-003
+      source: h3
+      destination: h103
+      count: 5
+      interval: 0.2
+    - id: flow-004
+      source: h4
+      destination: h104
+      count: 5
+      interval: 0.2
+    - id: flow-005
+      source: h5
+      destination: h105
+      count: 5
+      interval: 0.2
+    - id: flow-006
+      source: h6
+      destination: h106
+      count: 5
+      interval: 0.2
+    - id: flow-007
+      source: h7
+      destination: h107
+      count: 5
+      interval: 0.2
+    - id: flow-008
+      source: h8
+      destination: h108
+      count: 5
+      interval: 0.2
+    - id: flow-009
+      source: h9
+      destination: h109
+      count: 5
+      interval: 0.2
+    - id: flow-010
+      source: h10
+      destination: h110
+      count: 5
+      interval: 0.2
+    - id: flow-011
+      source: h11
+      destination: h111
+      count: 5
+      interval: 0.2
+    - id: flow-012
+      source: h12
+      destination: h112
+      count: 5
+      interval: 0.2
+    - id: flow-013
+      source: h13
+      destination: h113
+      count: 5
+      interval: 0.2
+    - id: flow-014
+      source: h14
+      destination: h114
+      count: 5
+      interval: 0.2
+    - id: flow-015
+      source: h15
+      destination: h115
+      count: 5
+      interval: 0.2
+    - id: flow-016
+      source: h16
+      destination: h116
+      count: 5
+      interval: 0.2
+    - id: flow-017
+      source: h17
+      destination: h117
+      count: 5
+      interval: 0.2
+    - id: flow-018
+      source: h18
+      destination: h118
+      count: 5
+      interval: 0.2
+    - id: flow-019
+      source: h19
+      destination: h119
+      count: 5
+      interval: 0.2
+    - id: flow-020
+      source: h20
+      destination: h120
+      count: 5
+      interval: 0.2
+    - id: flow-021
+      source: h21
+      destination: h121
+      count: 5
+      interval: 0.2
+    - id: flow-022
+      source: h22
+      destination: h122
+      count: 5
+      interval: 0.2
+    - id: flow-023
+      source: h23
+      destination: h123
+      count: 5
+      interval: 0.2
+    - id: flow-024
+      source: h24
+      destination: h124
+      count: 5
+      interval: 0.2
+    - id: flow-025
+      source: h25
+      destination: h125
+      count: 5
+      interval: 0.2
+    - id: flow-026
+      source: h26
+      destination: h126
+      count: 5
+      interval: 0.2
+    - id: flow-027
+      source: h27
+      destination: h127
+      count: 5
+      interval: 0.2
+    - id: flow-028
+      source: h28
+      destination: h128
+      count: 5
+      interval: 0.2
+    - id: flow-029
+      source: h29
+      destination: h129
+      count: 5
+      interval: 0.2
+    - id: flow-030
+      source: h30
+      destination: h130
+      count: 5
+      interval: 0.2
+    - id: flow-031
+      source: h31
+      destination: h131
+      count: 5
+      interval: 0.2
+    - id: flow-032
+      source: h32
+      destination: h132
+      count: 5
+      interval: 0.2
+    - id: flow-033
+      source: h33
+      destination: h133
+      count: 5
+      interval: 0.2
+    - id: flow-034
+      source: h34
+      destination: h134
+      count: 5
+      interval: 0.2
+    - id: flow-035
+      source: h35
+      destination: h135
+      count: 5
+      interval: 0.2
+    - id: flow-036
+      source: h36
+      destination: h136
+      count: 5
+      interval: 0.2
+    - id: flow-037
+      source: h37
+      destination: h137
+      count: 5
+      interval: 0.2
+    - id: flow-038
+      source: h38
+      destination: h138
+      count: 5
+      interval: 0.2
+    - id: flow-039
+      source: h39
+      destination: h139
+      count: 5
+      interval: 0.2
+    - id: flow-040
+      source: h40
+      destination: h140
+      count: 5
+      interval: 0.2
+    - id: flow-041
+      source: h41
+      destination: h141
+      count: 5
+      interval: 0.2
+    - id: flow-042
+      source: h42
+      destination: h142
+      count: 5
+      interval: 0.2
+    - id: flow-043
+      source: h43
+      destination: h143
+      count: 5
+      interval: 0.2
+    - id: flow-044
+      source: h44
+      destination: h144
+      count: 5
+      interval: 0.2
+    - id: flow-045
+      source: h45
+      destination: h145
+      count: 5
+      interval: 0.2
+    - id: flow-046
+      source: h46
+      destination: h146
+      count: 5
+      interval: 0.2
+    - id: flow-047
+      source: h47
+      destination: h147
+      count: 5
+      interval: 0.2
+    - id: flow-048
+      source: h48
+      destination: h148
+      count: 5
+      interval: 0.2
+    - id: flow-049
+      source: h49
+      destination: h149
+      count: 5
+      interval: 0.2
+    - id: flow-050
+      source: h50
+      destination: h150
+      count: 5
+      interval: 0.2
+    - id: flow-051
+      source: h51
+      destination: h151
+      count: 5
+      interval: 0.2
+    - id: flow-052
+      source: h52
+      destination: h152
+      count: 5
+      interval: 0.2
+    - id: flow-053
+      source: h53
+      destination: h153
+      count: 5
+      interval: 0.2
+    - id: flow-054
+      source: h54
+      destination: h154
+      count: 5
+      interval: 0.2
+    - id: flow-055
+      source: h55
+      destination: h155
+      count: 5
+      interval: 0.2
+    - id: flow-056
+      source: h56
+      destination: h156
+      count: 5
+      interval: 0.2
+    - id: flow-057
+      source: h57
+      destination: h157
+      count: 5
+      interval: 0.2
+    - id: flow-058
+      source: h58
+      destination: h158
+      count: 5
+      interval: 0.2
+    - id: flow-059
+      source: h59
+      destination: h159
+      count: 5
+      interval: 0.2
+    - id: flow-060
+      source: h60
+      destination: h160
+      count: 5
+      interval: 0.2
+    - id: flow-061
+      source: h61
+      destination: h161
+      count: 5
+      interval: 0.2
+    - id: flow-062
+      source: h62
+      destination: h162
+      count: 5
+      interval: 0.2
+    - id: flow-063
+      source: h63
+      destination: h163
+      count: 5
+      interval: 0.2
+    - id: flow-064
+      source: h64
+      destination: h164
+      count: 5
+      interval: 0.2
+    - id: flow-065
+      source: h65
+      destination: h165
+      count: 5
+      interval: 0.2
+    - id: flow-066
+      source: h66
+      destination: h166
+      count: 5
+      interval: 0.2
+    - id: flow-067
+      source: h67
+      destination: h167
+      count: 5
+      interval: 0.2
+    - id: flow-068
+      source: h68
+      destination: h168
+      count: 5
+      interval: 0.2
+    - id: flow-069
+      source: h69
+      destination: h169
+      count: 5
+      interval: 0.2
+    - id: flow-070
+      source: h70
+      destination: h170
+      count: 5
+      interval: 0.2
+    - id: flow-071
+      source: h71
+      destination: h171
+      count: 5
+      interval: 0.2
+    - id: flow-072
+      source: h72
+      destination: h172
+      count: 5
+      interval: 0.2
+    - id: flow-073
+      source: h73
+      destination: h173
+      count: 5
+      interval: 0.2
+    - id: flow-074
+      source: h74
+      destination: h174
+      count: 5
+      interval: 0.2
+    - id: flow-075
+      source: h75
+      destination: h175
+      count: 5
+      interval: 0.2
+    - id: flow-076
+      source: h76
+      destination: h176
+      count: 5
+      interval: 0.2
+    - id: flow-077
+      source: h77
+      destination: h177
+      count: 5
+      interval: 0.2
+    - id: flow-078
+      source: h78
+      destination: h178
+      count: 5
+      interval: 0.2
+    - id: flow-079
+      source: h79
+      destination: h179
+      count: 5
+      interval: 0.2
+    - id: flow-080
+      source: h80
+      destination: h180
+      count: 5
+      interval: 0.2
+    - id: flow-081
+      source: h81
+      destination: h181
+      count: 5
+      interval: 0.2
+    - id: flow-082
+      source: h82
+      destination: h182
+      count: 5
+      interval: 0.2
+    - id: flow-083
+      source: h83
+      destination: h183
+      count: 5
+      interval: 0.2
+    - id: flow-084
+      source: h84
+      destination: h184
+      count: 5
+      interval: 0.2
+    - id: flow-085
+      source: h85
+      destination: h185
+      count: 5
+      interval: 0.2
+    - id: flow-086
+      source: h86
+      destination: h186
+      count: 5
+      interval: 0.2
+    - id: flow-087
+      source: h87
+      destination: h187
+      count: 5
+      interval: 0.2
+    - id: flow-088
+      source: h88
+      destination: h188
+      count: 5
+      interval: 0.2
+    - id: flow-089
+      source: h89
+      destination: h189
+      count: 5
+      interval: 0.2
+    - id: flow-090
+      source: h90
+      destination: h190
+      count: 5
+      interval: 0.2
+    - id: flow-091
+      source: h91
+      destination: h191
+      count: 5
+      interval: 0.2
+    - id: flow-092
+      source: h92
+      destination: h192
+      count: 5
+      interval: 0.2
+    - id: flow-093
+      source: h93
+      destination: h193
+      count: 5
+      interval: 0.2
+    - id: flow-094
+      source: h94
+      destination: h194
+      count: 5
+      interval: 0.2
+    - id: flow-095
+      source: h95
+      destination: h195
+      count: 5
+      interval: 0.2
+    - id: flow-096
+      source: h96
+      destination: h196
+      count: 5
+      interval: 0.2
+    - id: flow-097
+      source: h97
+      destination: h197
+      count: 5
+      interval: 0.2
+    - id: flow-098
+      source: h98
+      destination: h198
+      count: 5
+      interval: 0.2
+    - id: flow-099
+      source: h99
+      destination: h199
+      count: 5
+      interval: 0.2
+    - id: flow-100
+      source: h100
+      destination: h200
+      count: 5
+      interval: 0.2
+collectors:
+- name: flows
+  module: collectors.flows
+  function: collect_flows

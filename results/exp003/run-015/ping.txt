@@ -1,0 +1,71 @@
+===== FLOW flow-1 =====
+PING 10.0.0.3 (10.0.0.3) 56(84) bytes of data.
+64 bytes from 10.0.0.3: icmp_seq=1 ttl=64 time=72.6 ms
+64 bytes from 10.0.0.3: icmp_seq=2 ttl=64 time=21.7 ms
+64 bytes from 10.0.0.3: icmp_seq=3 ttl=64 time=20.4 ms
+64 bytes from 10.0.0.3: icmp_seq=4 ttl=64 time=20.9 ms
+64 bytes from 10.0.0.3: icmp_seq=5 ttl=64 time=20.2 ms
+64 bytes from 10.0.0.3: icmp_seq=6 ttl=64 time=20.4 ms
+64 bytes from 10.0.0.3: icmp_seq=7 ttl=64 time=20.8 ms
+64 bytes from 10.0.0.3: icmp_seq=8 ttl=64 time=20.3 ms
+64 bytes from 10.0.0.3: icmp_seq=9 ttl=64 time=20.6 ms
+64 bytes from 10.0.0.3: icmp_seq=10 ttl=64 time=20.9 ms
+
+--- 10.0.0.3 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1807ms
+rtt min/avg/max/mdev = 20.231/25.891/72.583/15.569 ms
+
+
+===== FLOW flow-2 =====
+PING 10.0.0.4 (10.0.0.4) 56(84) bytes of data.
+64 bytes from 10.0.0.4: icmp_seq=1 ttl=64 time=69.3 ms
+64 bytes from 10.0.0.4: icmp_seq=2 ttl=64 time=21.4 ms
+64 bytes from 10.0.0.4: icmp_seq=3 ttl=64 time=20.2 ms
+64 bytes from 10.0.0.4: icmp_seq=4 ttl=64 time=20.3 ms
+64 bytes from 10.0.0.4: icmp_seq=5 ttl=64 time=20.9 ms
+64 bytes from 10.0.0.4: icmp_seq=6 ttl=64 time=20.3 ms
+64 bytes from 10.0.0.4: icmp_seq=7 ttl=64 time=20.4 ms
+64 bytes from 10.0.0.4: icmp_seq=8 ttl=64 time=21.4 ms
+64 bytes from 10.0.0.4: icmp_seq=9 ttl=64 time=21.3 ms
+64 bytes from 10.0.0.4: icmp_seq=10 ttl=64 time=22.0 ms
+
+--- 10.0.0.4 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1806ms
+rtt min/avg/max/mdev = 20.212/25.745/69.320/14.536 ms
+
+
+===== FLOW flow-3 =====
+PING 10.0.0.4 (10.0.0.4) 56(84) bytes of data.
+64 bytes from 10.0.0.4: icmp_seq=1 ttl=64 time=68.6 ms
+64 bytes from 10.0.0.4: icmp_seq=2 ttl=64 time=22.2 ms
+64 bytes from 10.0.0.4: icmp_seq=3 ttl=64 time=21.3 ms
+64 bytes from 10.0.0.4: icmp_seq=4 ttl=64 time=20.7 ms
+64 bytes from 10.0.0.4: icmp_seq=5 ttl=64 time=20.2 ms
+64 bytes from 10.0.0.4: icmp_seq=6 ttl=64 time=20.3 ms
+64 bytes from 10.0.0.4: icmp_seq=7 ttl=64 time=20.9 ms
+64 bytes from 10.0.0.4: icmp_seq=8 ttl=64 time=21.0 ms
+64 bytes from 10.0.0.4: icmp_seq=9 ttl=64 time=20.3 ms
+64 bytes from 10.0.0.4: icmp_seq=10 ttl=64 time=21.8 ms
+
+--- 10.0.0.4 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1807ms
+rtt min/avg/max/mdev = 20.231/25.724/68.598/14.303 ms
+
+
+===== FLOW flow-4 =====
+PING 10.0.0.3 (10.0.0.3) 56(84) bytes of data.
+64 bytes from 10.0.0.3: icmp_seq=1 ttl=64 time=70.7 ms
+64 bytes from 10.0.0.3: icmp_seq=2 ttl=64 time=21.5 ms
+64 bytes from 10.0.0.3: icmp_seq=3 ttl=64 time=21.1 ms
+64 bytes from 10.0.0.3: icmp_seq=4 ttl=64 time=20.3 ms
+64 bytes from 10.0.0.3: icmp_seq=5 ttl=64 time=21.6 ms
+64 bytes from 10.0.0.3: icmp_seq=6 ttl=64 time=21.4 ms
+64 bytes from 10.0.0.3: icmp_seq=7 ttl=64 time=21.6 ms
+64 bytes from 10.0.0.3: icmp_seq=8 ttl=64 time=22.0 ms
+64 bytes from 10.0.0.3: icmp_seq=9 ttl=64 time=21.0 ms
+64 bytes from 10.0.0.3: icmp_seq=10 ttl=64 time=20.3 ms
+
+--- 10.0.0.3 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1809ms
+rtt min/avg/max/mdev = 20.276/26.165/70.740/14.867 ms
+
