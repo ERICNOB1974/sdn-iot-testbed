@@ -637,31 +637,31 @@ def validate_flow_traffic_config(
             strictly_positive=True,
         )
 
-        if "duration_seconds" in traffic:
-            validate_number(
-                traffic["duration_seconds"],
-                "traffic.duration_seconds del flujo '{}'".format(flow_id),
-                strictly_positive=True,
+    if "duration_seconds" in traffic:
+        validate_number(
+            traffic["duration_seconds"],
+            "traffic.duration_seconds del flujo '{}'".format(flow_id),
+            strictly_positive=True,
+        )
+
+    if "seed" in traffic:
+        validate_number(
+            traffic["seed"],
+            "traffic.seed del flujo '{}'".format(flow_id),
+            strictly_positive=True,
+        )
+
+        if traffic["seed"] >= 1:
+            raise ConfigurationError(
+                "traffic.seed del flujo '{}' debe ser menor que 1".format(flow_id)
             )
 
-        if "seed" in traffic:
-            validate_number(
-                traffic["seed"],
-                "traffic.seed del flujo '{}'".format(flow_id),
-                strictly_positive=True,
-            )
-
-            if traffic["seed"] >= 1:
-                raise ConfigurationError(
-                    "traffic.seed del flujo '{}' debe ser menor que 1".format(flow_id)
-                )
-
-        if "start_seconds" in traffic:
-            validate_number(
-                traffic["start_seconds"],
-                "traffic.start_seconds del flujo '{}'".format(flow_id),
-                minimum=0,
-            )
+    if "start_seconds" in traffic:
+        validate_number(
+            traffic["start_seconds"],
+            "traffic.start_seconds del flujo '{}'".format(flow_id),
+            minimum=0,
+        )
 
 
 def validate_flow_config(
@@ -850,6 +850,30 @@ def validate_traffic_profile(
 
         if len(flow_ids) != len(set(flow_ids)):
             raise ConfigurationError("Existen IDs de flujos duplicados")
+
+        flow_match_keys = {}
+
+        for flow in flows:
+            traffic = flow.get("traffic", {})
+
+            match_key = (
+                flow["source"],
+                flow["destination"],
+                traffic.get("ip_protocol"),
+                traffic.get("source_port"),
+                traffic.get("destination_port"),
+            )
+
+            if match_key in flow_match_keys:
+                raise ConfigurationError(
+                    "Los flujos '{}' y '{}' tienen la misma especificacion "
+                    "de matching".format(
+                        flow_match_keys[match_key],
+                        flow["id"],
+                    )
+                )
+
+            flow_match_keys[match_key] = flow["id"]
 
         return
 

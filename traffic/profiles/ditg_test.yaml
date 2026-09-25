@@ -3,13 +3,11 @@ traffic:
 
   flows:
     - id: flow-1
-
       source: h1
       destination: h3
 
       traffic:
         ip_protocol: 17
-        source_port: 5001
         destination_port: 6001
 
         packet_size_bytes: 512

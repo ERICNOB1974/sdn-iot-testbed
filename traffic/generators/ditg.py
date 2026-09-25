@@ -46,7 +46,6 @@ def _validate_flow(flow):
 
     required_traffic = [
         "ip_protocol",
-        "source_port",
         "destination_port",
         "packet_size_bytes",
         "rate_pps",
@@ -64,9 +63,6 @@ def _validate_flow(flow):
 
     _normalize_protocol(traffic["ip_protocol"])
 
-    if not 1 <= int(traffic["source_port"]) <= 65535:
-        raise ValueError("source_port debe estar entre 1 y 65535")
-
     if not 1 <= int(traffic["destination_port"]) <= 65535:
         raise ValueError("destination_port debe estar entre 1 y 65535")
 
@@ -82,8 +78,13 @@ def _validate_flow(flow):
     if float(traffic.get("start_seconds", 0)) < 0:
         raise ValueError("start_seconds debe ser mayor o igual que cero")
 
-    if int(traffic.get("seed", 0)) < 0:
-        raise ValueError("seed debe ser mayor o igual que cero")
+    seed = traffic.get("seed")
+
+    if seed is not None:
+        seed = float(seed)
+
+        if not 0 < seed < 1:
+            raise ValueError("seed debe cumplir 0 < seed < 1")
 
 
 def _parse_itgdec_summary(output):
@@ -261,13 +262,13 @@ def run_ditg(net, config):
             destination_host = net.get(destination_name)
 
             destination_ip = destination_host.IP()
+            source_ip = source_host.IP()
 
             traffic = flow["traffic"]
 
             ip_protocol = int(traffic["ip_protocol"])
             protocol = _normalize_protocol(ip_protocol)
 
-            source_port = int(traffic["source_port"])
             destination_port = int(traffic["destination_port"])
 
             packet_size = int(traffic["packet_size_bytes"])
@@ -315,8 +316,6 @@ def run_ditg(net, config):
                 destination_ip,
                 "-T",
                 protocol,
-                "-sp",
-                str(source_port),
                 "-rp",
                 str(destination_port),
                 "-C",
@@ -372,10 +371,10 @@ def run_ditg(net, config):
                     "id": flow_id,
                     "source": source_name,
                     "destination": destination_name,
+                    "source_ip": source_ip,
                     "destination_ip": destination_ip,
                     "ip_protocol": ip_protocol,
                     "protocol": protocol.lower(),
-                    "source_port": source_port,
                     "destination_port": destination_port,
                     "packet_size_bytes": packet_size,
                     "rate_pps": packet_rate,
