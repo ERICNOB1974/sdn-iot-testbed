@@ -1,0 +1,14 @@
+name: goodnet-4-hosts
+
+hosts:
+  - name: h1
+    switch: s5
+
+  - name: h2
+    switch: s1
+
+  - name: h3
+    switch: s14
+
+  - name: h4
+    switch: s17

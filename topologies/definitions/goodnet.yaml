@@ -1,0 +1,250 @@
+name: goodnet
+hosts: []
+switches:
+- name: s1
+  dpid: '0000000000000001'
+  metadata:
+    topology_zoo_id: '0'
+    label: Tampa
+    country: United States
+    latitude: 27.94752
+    longitude: -82.45843
+    internal: 1
+- name: s2
+  dpid: '0000000000000002'
+  metadata:
+    topology_zoo_id: '1'
+    label: Oklahoma City
+    country: United States
+    latitude: 35.46756
+    longitude: -97.51643
+    internal: 1
+- name: s3
+  dpid: '0000000000000003'
+  metadata:
+    topology_zoo_id: '2'
+    label: New Orleans
+    country: United States
+    latitude: 29.95465
+    longitude: -90.07507
+    internal: 1
+- name: s4
+  dpid: '0000000000000004'
+  metadata:
+    topology_zoo_id: '3'
+    label: Jacksonville
+    country: United States
+    latitude: 30.33218
+    longitude: -81.65565
+    internal: 1
+- name: s5
+  dpid: '0000000000000005'
+  metadata:
+    topology_zoo_id: '4'
+    label: Los Angeles
+    country: United States
+    latitude: 34.05223
+    longitude: -118.24368
+    internal: 1
+- name: s6
+  dpid: '0000000000000006'
+  metadata:
+    topology_zoo_id: '5'
+    label: Phoenix
+    country: United States
+    latitude: 33.44838
+    longitude: -112.07404
+    internal: 1
+- name: s7
+  dpid: '0000000000000007'
+  metadata:
+    topology_zoo_id: '6'
+    label: Tucson
+    country: United States
+    latitude: 32.22174
+    longitude: -110.92648
+    internal: 1
+- name: s8
+  dpid: 0000000000000008
+  metadata:
+    topology_zoo_id: '7'
+    label: Atlanta
+    country: United States
+    latitude: 33.749
+    longitude: -84.38798
+    internal: 1
+- name: s9
+  dpid: 0000000000000009
+  metadata:
+    topology_zoo_id: '8'
+    label: Birmingham
+    country: United States
+    latitude: 33.52066
+    longitude: -86.80249
+    internal: 1
+- name: s10
+  dpid: 000000000000000a
+  metadata:
+    topology_zoo_id: '9'
+    label: San Jose
+    country: United States
+    latitude: 37.33939
+    longitude: -121.89496
+    internal: 1
+- name: s11
+  dpid: 000000000000000b
+  metadata:
+    topology_zoo_id: '10'
+    label: Salt Lake City
+    country: United States
+    latitude: 40.76078
+    longitude: -111.89105
+    internal: 1
+- name: s12
+  dpid: 000000000000000c
+  metadata:
+    topology_zoo_id: '11'
+    label: Denver
+    country: United States
+    latitude: 39.73915
+    longitude: -104.9847
+    internal: 1
+- name: s13
+  dpid: 000000000000000d
+  metadata:
+    topology_zoo_id: '12'
+    label: Chicago
+    country: United States
+    latitude: 41.85003
+    longitude: -87.65005
+    internal: 1
+- name: s14
+  dpid: 000000000000000e
+  metadata:
+    topology_zoo_id: '13'
+    label: Hartford
+    country: United States
+    latitude: 41.76371
+    longitude: -72.68509
+    internal: 1
+- name: s15
+  dpid: 000000000000000f
+  metadata:
+    topology_zoo_id: '14'
+    label: New York
+    country: United States
+    latitude: 40.71427
+    longitude: -74.00597
+    internal: 1
+- name: s16
+  dpid: '0000000000000010'
+  metadata:
+    topology_zoo_id: '15'
+    label: Washington, DC
+    country: United States
+    latitude: 38.89511
+    longitude: -77.03637
+    internal: 1
+- name: s17
+  dpid: '0000000000000011'
+  metadata:
+    topology_zoo_id: '16'
+    label: Chattanooga
+    country: United States
+    latitude: 35.04563
+    longitude: -85.30968
+    internal: 1
+links:
+- id: s1-s4
+  source: s1
+  destination: s4
+- id: s1-s8
+  source: s1
+  destination: s8
+- id: s2-s10
+  source: s2
+  destination: s10
+- id: s2-s16
+  source: s2
+  destination: s16
+- id: s3-s13
+  source: s3
+  destination: s13
+- id: s3-s6
+  source: s3
+  destination: s6
+- id: s3-s8
+  source: s3
+  destination: s8
+- id: s4-s10
+  source: s4
+  destination: s10
+- id: s4-s16
+  source: s4
+  destination: s16
+- id: s5-s10
+  source: s5
+  destination: s10
+- id: s5-s13
+  source: s5
+  destination: s13
+- id: s5-s16
+  source: s5
+  destination: s16
+- id: s6-s10
+  source: s6
+  destination: s10
+- id: s6-s13
+  source: s6
+  destination: s13
+- id: s6-s7
+  source: s6
+  destination: s7
+- id: s6-s16
+  source: s6
+  destination: s16
+- id: s8-s9
+  source: s8
+  destination: s9
+- id: s8-s13
+  source: s8
+  destination: s13
+- id: s8-s16
+  source: s8
+  destination: s16
+- id: s10-s11
+  source: s10
+  destination: s11
+- id: s10-s12
+  source: s10
+  destination: s12
+- id: s10-s13
+  source: s10
+  destination: s13
+- id: s10-s15
+  source: s10
+  destination: s15
+- id: s10-s16
+  source: s10
+  destination: s16
+- id: s11-s13
+  source: s11
+  destination: s13
+- id: s12-s13
+  source: s12
+  destination: s13
+- id: s13-s15
+  source: s13
+  destination: s15
+- id: s13-s16
+  source: s13
+  destination: s16
+- id: s14-s15
+  source: s14
+  destination: s15
+- id: s15-s16
+  source: s15
+  destination: s16
+- id: s16-s17
+  source: s16
+  destination: s17

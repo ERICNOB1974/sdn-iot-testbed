@@ -1,0 +1,29 @@
+traffic:
+
+  type: ping
+
+  flows:
+
+    - id: flow-1
+      source: h1
+      destination: h3
+      count: 10
+      interval: 0.2
+
+    - id: flow-2
+      source: h2
+      destination: h4
+      count: 10
+      interval: 0.2
+
+    - id: flow-3
+      source: h1
+      destination: h4
+      count: 10
+      interval: 0.2
+
+    - id: flow-4
+      source: h2
+      destination: h3
+      count: 10
+      interval: 0.2
