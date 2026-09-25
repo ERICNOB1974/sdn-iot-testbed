@@ -1,0 +1,42 @@
+traffic:
+  type: ditg
+
+  flows:
+    - id: flow-1
+      source: h1
+      destination: h3
+
+      traffic:
+        ip_protocol: 17
+        destination_port: 6001
+        packet_size_bytes: 512
+        rate_pps: 100
+        duration_seconds: 10
+        start_seconds: 0
+        seed: 0.5
+
+    - id: flow-2
+      source: h2
+      destination: h3
+
+      traffic:
+        ip_protocol: 17
+        destination_port: 6002
+        packet_size_bytes: 512
+        rate_pps: 100
+        duration_seconds: 10
+        start_seconds: 2
+        seed: 0.6
+
+    - id: flow-3
+      source: h1
+      destination: h4
+
+      traffic:
+        ip_protocol: 17
+        destination_port: 6003
+        packet_size_bytes: 512
+        rate_pps: 100
+        duration_seconds: 10
+        start_seconds: 4
+        seed: 0.7
