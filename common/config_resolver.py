@@ -851,29 +851,44 @@ def validate_traffic_profile(
         if len(flow_ids) != len(set(flow_ids)):
             raise ConfigurationError("Existen IDs de flujos duplicados")
 
-        flow_match_keys = {}
+        for first_index, first_flow in enumerate(flows):
+            first_traffic = first_flow.get("traffic", {})
 
-        for flow in flows:
-            traffic = flow.get("traffic", {})
+            for second_flow in flows[first_index + 1 :]:
+                if first_flow["source"] != second_flow["source"]:
+                    continue
 
-            match_key = (
-                flow["source"],
-                flow["destination"],
-                traffic.get("ip_protocol"),
-                traffic.get("source_port"),
-                traffic.get("destination_port"),
-            )
+                if first_flow["destination"] != second_flow["destination"]:
+                    continue
 
-            if match_key in flow_match_keys:
-                raise ConfigurationError(
-                    "Los flujos '{}' y '{}' tienen la misma especificacion "
-                    "de matching".format(
-                        flow_match_keys[match_key],
-                        flow["id"],
+                second_traffic = second_flow.get("traffic", {})
+
+                overlapping = True
+
+                for field in [
+                    "ip_protocol",
+                    "source_port",
+                    "destination_port",
+                ]:
+                    first_value = first_traffic.get(field)
+                    second_value = second_traffic.get(field)
+
+                    if (
+                        first_value is not None
+                        and second_value is not None
+                        and first_value != second_value
+                    ):
+                        overlapping = False
+                        break
+
+                if overlapping:
+                    raise ConfigurationError(
+                        "Los flujos '{}' y '{}' tienen especificaciones "
+                        "de matching solapadas".format(
+                            first_flow["id"],
+                            second_flow["id"],
+                        )
                     )
-                )
-
-            flow_match_keys[match_key] = flow["id"]
 
         return
 
