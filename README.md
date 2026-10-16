@@ -113,6 +113,10 @@ Luego ejecutar:
 
 Para más detalle, ver [docs/experiments.md](docs/experiments.md).
 
+## Flujo de ejecución
+
+![Flujo de ejecución del testbed](docs/images/workflow-testbed.svg)
+
 ## Documentación
 
 La documentación está separada por tema:
@@ -125,7 +129,3 @@ La documentación está separada por tema:
 - [Algoritmos de ruteo](docs/routing-algorithms.md)
 - [Controladores y versiones](docs/controllers.md)
 - [Resultados](docs/results.md)
-
-## Flujo de ejecución
-
-![Flujo de ejecución del testbed](docs/images/workflow-testbed.svg)
