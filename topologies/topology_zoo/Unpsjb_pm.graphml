@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d21" for="edge" attr.name="color" attr.type="string"/>
+<key id="d20" for="edge" attr.name="medium" attr.type="string"/>
+<key id="d19" for="edge" attr.name="id" attr.type="string"/>
+<key id="d18" for="node" attr.name="node_type" attr.type="string"/>
+<key id="d17" for="node" attr.name="layout_y" attr.type="double"/>
+<key id="d16" for="node" attr.name="layout_x" attr.type="double"/>
+<key id="d15" for="node" attr.name="role" attr.type="string"/>
+<key id="d14" for="node" attr.name="rack" attr.type="string"/>
+<key id="d13" for="node" attr.name="area" attr.type="string"/>
+<key id="d12" for="node" attr.name="building" attr.type="string"/>
+<key id="d11" for="node" attr.name="shape" attr.type="string"/>
+<key id="d10" for="node" attr.name="managed" attr.type="boolean"/>
+<key id="d9" for="node" attr.name="ports" attr.type="string"/>
+<key id="d8" for="node" attr.name="model" attr.type="string"/>
+<key id="d7" for="node" attr.name="label" attr.type="string"/>
+<key id="d6" for="node" attr.name="dot_id" attr.type="string"/>
+<key id="d5" for="graph" attr.name="edgedefault" attr.type="string"/>
+<key id="d4" for="graph" attr.name="date" attr.type="string"/>
+<key id="d3" for="graph" attr.name="source_plan_image" attr.type="string"/>
+<key id="d2" for="graph" attr.name="source_dot" attr.type="string"/>
+<key id="d1" for="graph" attr.name="description" attr.type="string"/>
+<key id="d0" for="graph" attr.name="name" attr.type="string"/>
+<graph edgedefault="undirected"><data key="d0">switches_2026_09_15</data>
+<data key="d1">Conexión de switches - Universidad Nacional de la Patagonia San Juan Bosco - Sede Puerto Madryn</data>
+<data key="d2">switches_2026-09-14.dot</data>
+<data key="d3">plano-aulas.png</data>
+<data key="d4">2026-09-15</data>
+<data key="d5">undirected</data>
+<node id="SWAulas8">
+  <data key="d6">7</data>
+  <data key="d7">SWAulas8</data>
+  <data key="d8">HPE Aruba JL682A</data>
+  <data key="d9">24x1Gb + 4SFP+</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Edificio Aulas</data>
+  <data key="d13">Rack Biblioteca</data>
+  <data key="d14">Rack Biblioteca</data>
+  <data key="d15">access</data>
+  <data key="d16">4.8</data>
+  <data key="d17">4.2</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWLabs2">
+  <data key="d6">8</data>
+  <data key="d7">SWLabs2</data>
+  <data key="d8">TP-Link T1600G-28TS</data>
+  <data key="d9">24x1Gb + 4SFP</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Edificio Aulas</data>
+  <data key="d13">Biblioteca</data>
+  <data key="d14">Biblioteca</data>
+  <data key="d15">access</data>
+  <data key="d16">4.2</data>
+  <data key="d17">2.7</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWAdminDZ">
+  <data key="d6">9</data>
+  <data key="d7">SWAdminDZ</data>
+  <data key="d8">TP-Link T1600G-28TS</data>
+  <data key="d9">24x1Gb + 4SFP</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Edificio Aulas</data>
+  <data key="d13">Biblioteca</data>
+  <data key="d14">Biblioteca</data>
+  <data key="d15">access</data>
+  <data key="d16">3.5</data>
+  <data key="d17">2.7</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWSrv2">
+  <data key="d6">10</data>
+  <data key="d7">SWSrv2</data>
+  <data key="d8">HPE Aruba JL682A</data>
+  <data key="d9">24x1Gb + 4SFP+</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Rack Módulo de Servidores</data>
+  <data key="d13">Rack Módulo de Servidores</data>
+  <data key="d14">Rack Módulo de Servidores</data>
+  <data key="d15">distribution</data>
+  <data key="d16">0.0</data>
+  <data key="d17">5.4</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWLabs1">
+  <data key="d6">12</data>
+  <data key="d7">SWLabs1</data>
+  <data key="d8">TP-Link T1600G-28TS</data>
+  <data key="d9">24x1Gb + 4SFP</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Edificio Aulas</data>
+  <data key="d13">Oficina DZ</data>
+  <data key="d14">Oficina DZ</data>
+  <data key="d15">access</data>
+  <data key="d16">4.9</data>
+  <data key="d17">2.7</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWAulas4">
+  <data key="d6">41</data>
+  <data key="d7">SWAulas4</data>
+  <data key="d8">Ubiquiti EdgeSwitch-48-Lite</data>
+  <data key="d9">48x1Gb + 2SFP + 2SFP+</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Rack Módulo de Servidores</data>
+  <data key="d13">Rack comunicaciones</data>
+  <data key="d14">Rack comunicaciones</data>
+  <data key="d15">core</data>
+  <data key="d16">0.0</data>
+  <data key="d17">7.0</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWAulas6">
+  <data key="d6">48</data>
+  <data key="d7">SWAulas6</data>
+  <data key="d8">Ubiquiti EdgeSwitch-48-Lite</data>
+  <data key="d9">48x1Gb + 2SFP + 2SFP+</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Edificio Aulas</data>
+  <data key="d13">Rack Bedelía</data>
+  <data key="d14">Rack Bedelía</data>
+  <data key="d15">access</data>
+  <data key="d16">5.8</data>
+  <data key="d17">3.8</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWAdmin3">
+  <data key="d6">49</data>
+  <data key="d7">SWAdmin3</data>
+  <data key="d8">Ubiquiti EdgeSwitch-48-Lite</data>
+  <data key="d9">48x1Gb + 2SFP + 2SFP+</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Edificio Aulas</data>
+  <data key="d13">Rack Módulo Administración</data>
+  <data key="d14">Rack Módulo Administración</data>
+  <data key="d15">access</data>
+  <data key="d16">6.7</data>
+  <data key="d17">3.8</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWAmpl">
+  <data key="d6">50</data>
+  <data key="d7">SWAmpl</data>
+  <data key="d8">Ubiquiti EdgeSwitch-48-Lite</data>
+  <data key="d9">48x1Gb + 2SFP + 2SFP+</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Ampliación</data>
+  <data key="d13">Rack Ampliación</data>
+  <data key="d14">Rack Ampliación</data>
+  <data key="d15">access</data>
+  <data key="d16">8.8</data>
+  <data key="d17">3.8</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWLabs4">
+  <data key="d6">51</data>
+  <data key="d7">SWLabs4</data>
+  <data key="d8">Ubiquiti EdgeSwitch-48-Lite</data>
+  <data key="d9">48x1Gb + 2SFP + 2SFP+</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Módulo FI</data>
+  <data key="d13">Laboratorio 0</data>
+  <data key="d14">Laboratorio 0</data>
+  <data key="d15">access</data>
+  <data key="d16">1.2</data>
+  <data key="d17">5.5</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWAulas7">
+  <data key="d6">57</data>
+  <data key="d7">SWAulas7</data>
+  <data key="d8">Ubiquiti US-16-150W</data>
+  <data key="d9">16x1Gb + 2SFP</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Edificio Aulas</data>
+  <data key="d13">Rack Aula Magna</data>
+  <data key="d14">Rack Aula Magna</data>
+  <data key="d15">access</data>
+  <data key="d16">7.8</data>
+  <data key="d17">3.8</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWLabs5">
+  <data key="d6">59</data>
+  <data key="d7">SWLabs5</data>
+  <data key="d8">TP-Link TL-SG1016DE</data>
+  <data key="d9">16x1Gb</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Edificio Aulas</data>
+  <data key="d13">Aula 10</data>
+  <data key="d14">Aula 10</data>
+  <data key="d15">access</data>
+  <data key="d16">2.6</data>
+  <data key="d17">2.7</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWFibra">
+  <data key="d6">60</data>
+  <data key="d7">SWFibra</data>
+  <data key="d8">Ubiquiti EdgeSwitch 16 XG</data>
+  <data key="d9">12xSFP+ + 4x10G</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Edificio Aulas</data>
+  <data key="d13">Rack Biblioteca</data>
+  <data key="d14">Rack Biblioteca</data>
+  <data key="d15">core</data>
+  <data key="d16">4.8</data>
+  <data key="d17">5.6</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWSrv">
+  <data key="d6">62</data>
+  <data key="d7">SWSrv</data>
+  <data key="d8">TP-Link T1600G-28TS</data>
+  <data key="d9">24x1Gb + 4SFP</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Rack Módulo de Servidores</data>
+  <data key="d13">Rack Módulo de Servidores</data>
+  <data key="d14">Rack Módulo de Servidores</data>
+  <data key="d15">access</data>
+  <data key="d16">0.0</data>
+  <data key="d17">3.8</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWLabs3">
+  <data key="d6">64</data>
+  <data key="d7">SWLabs3</data>
+  <data key="d8">TP-Link TL-SG3424P</data>
+  <data key="d9">24x1Gb o 20x1Gb+4SFP</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Edificio Aulas</data>
+  <data key="d13">Biblioteca</data>
+  <data key="d14">Biblioteca</data>
+  <data key="d15">access</data>
+  <data key="d16">3.5</data>
+  <data key="d17">1.4</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SWAulas">
+  <data key="d6">65</data>
+  <data key="d7">SWAulas</data>
+  <data key="d8">TP-Link TL-SG3424P</data>
+  <data key="d9">24x1Gb o 20x1Gb+4SFP</data>
+  <data key="d10">True</data>
+  <data key="d11">circle</data>
+  <data key="d12">Edificio Aulas</data>
+  <data key="d13">Rack Bedelía</data>
+  <data key="d14">Rack Bedelía</data>
+  <data key="d15">access</data>
+  <data key="d16">5.8</data>
+  <data key="d17">2.5</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SwitchFotocopiadora">
+  <data key="d6">37</data>
+  <data key="d7">Switch Fotocopiadora</data>
+  <data key="d8">TP-Link</data>
+  <data key="d9">5x100Mb</data>
+  <data key="d10">False</data>
+  <data key="d11">rect</data>
+  <data key="d12">Edificio Aulas</data>
+  <data key="d13">Fotocopiadora</data>
+  <data key="d14">Fotocopiadora</data>
+  <data key="d15">unmanaged_access</data>
+  <data key="d16">6.6</data>
+  <data key="d17">2.6</data>
+  <data key="d18">switch</data>
+</node>
+<node id="SwitchGremio">
+  <data key="d6">38</data>
+  <data key="d7">Switch Gremio</data>
+  <data key="d8">unknown</data>
+  <data key="d9">8x100Mb</data>
+  <data key="d10">False</data>
+  <data key="d11">rect</data>
+  <data key="d12">Edificio Aulas</data>
+  <data key="d13">Oficina Gremio</data>
+  <data key="d14">Oficina Gremio</data>
+  <data key="d15">unmanaged_access</data>
+  <data key="d16">7.4</data>
+  <data key="d17">2.6</data>
+  <data key="d18">switch</data>
+</node>
+<edge source="SWAulas8" target="SWLabs2">
+  <data key="d19">e09_SWAulas8_SWLabs2</data>
+  <data key="d20">copper</data>
+  <data key="d21">black</data>
+</edge>
+<edge source="SWAulas8" target="SWAdminDZ">
+  <data key="d19">e10_SWAulas8_SWAdminDZ</data>
+  <data key="d20">copper</data>
+  <data key="d21">black</data>
+</edge>
+<edge source="SWAulas8" target="SWLabs1">
+  <data key="d19">e11_SWAulas8_SWLabs1</data>
+  <data key="d20">copper</data>
+  <data key="d21">black</data>
+</edge>
+<edge source="SWAulas8" target="SWLabs5">
+  <data key="d19">e12_SWAulas8_SWLabs5</data>
+  <data key="d20">copper</data>
+  <data key="d21">black</data>
+</edge>
+<edge source="SWAulas8" target="SWFibra">
+  <data key="d19">e14_SWFibra_SWAulas8</data>
+  <data key="d20">copper</data>
+  <data key="d21">black</data>
+</edge>
+<edge source="SWAdminDZ" target="SWLabs3">
+  <data key="d19">e13_SWAdminDZ_SWLabs3</data>
+  <data key="d20">copper</data>
+  <data key="d21">black</data>
+</edge>
+<edge source="SWSrv2" target="SWAulas4">
+  <data key="d19">e01_SWAulas4_SWSrv2</data>
+  <data key="d20">copper</data>
+  <data key="d21">black</data>
+</edge>
+<edge source="SWSrv2" target="SWSrv">
+  <data key="d19">e02_SWSrv2_SWSrv</data>
+  <data key="d20">copper</data>
+  <data key="d21">black</data>
+</edge>
+<edge source="SWAulas4" target="SWLabs4">
+  <data key="d19">e03_SWAulas4_SWLabs4</data>
+  <data key="d20">copper</data>
+  <data key="d21">black</data>
+</edge>
+<edge source="SWAulas4" target="SWFibra">
+  <data key="d19">e04_SWAulas4_SWFibra</data>
+  <data key="d20">fiber</data>
+  <data key="d21">red</data>
+</edge>
+<edge source="SWAulas6" target="SwitchFotocopiadora">
+  <data key="d19">e06_SWAulas6_SwitchFotocopiadora</data>
+  <data key="d20">copper</data>
+  <data key="d21">black</data>
+</edge>
+<edge source="SWAulas6" target="SwitchGremio">
+  <data key="d19">e07_SWAulas6_SwitchGremio</data>
+  <data key="d20">copper</data>
+  <data key="d21">black</data>
+</edge>
+<edge source="SWAulas6" target="SWAulas">
+  <data key="d19">e08_SWAulas6_SWAulas</data>
+  <data key="d20">copper</data>
+  <data key="d21">black</data>
+</edge>
+<edge source="SWAulas6" target="SWFibra">
+  <data key="d19">e15_SWFibra_SWAulas6</data>
+  <data key="d20">fiber</data>
+  <data key="d21">red</data>
+</edge>
+<edge source="SWAdmin3" target="SWFibra">
+  <data key="d19">e16_SWFibra_SWAdmin3</data>
+  <data key="d20">fiber</data>
+  <data key="d21">red</data>
+</edge>
+<edge source="SWAmpl" target="SWFibra">
+  <data key="d19">e17_SWFibra_SWAmpl</data>
+  <data key="d20">fiber</data>
+  <data key="d21">red</data>
+</edge>
+<edge source="SWAulas7" target="SWFibra">
+  <data key="d19">e05_SWFibra_SWAulas7</data>
+  <data key="d20">fiber</data>
+  <data key="d21">red</data>
+</edge>
+</graph></graphml>
